@@ -1,0 +1,11 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<div class="cards-grid">
+  {% for post in site.posts %}
+    {% include postbox.html %}
+  {% endfor %}
+</div>

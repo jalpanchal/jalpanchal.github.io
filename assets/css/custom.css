@@ -1,0 +1,72 @@
+/* Mediumish Card Styles */
+.card {
+    border: 0;
+    border-radius: 0.25rem;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-body {
+    padding: 2rem 1.3rem;
+  }
+  
+  .card-title {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .card-text {
+    color: rgba(0, 0, 0, .44);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  .wrapfooter {
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .author-meta {
+    flex: 1 1 auto;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+  }
+  
+  span.post-name,
+  span.post-date,
+  span.author-meta {
+    display: inline-block;
+  }
+  
+  span.post-date,
+  span.post-read {
+    color: rgba(0, 0, 0, .44);
+  }
+  
+  .card .img-fluid {
+    width: 100%;
+  }
+  
+  /* Grid styles */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
