@@ -15,18 +15,18 @@
           <img src="{{ site.teaser | relative_url }}" alt="{{ include.post.title }}">
         {% endif %}
       </a>
+    </div>
+    <div class="featured-post-content">
+      <h2><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h2>
+      <p class="excerpt">{{ include.post.excerpt | strip_html | truncate: 200 }}</p>
       {% if include.post.tags[0] %}
+        <hr class="tags-separator">
         <div class="card-tags">
           {% for tag in include.post.tags limit:2 %}
             <span class="tag">{{ tag }}</span>
           {% endfor %}
         </div>
       {% endif %}
-    </div>
-    <div class="featured-post-content">
-      <h2><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h2>
-      <p class="excerpt">{{ include.post.excerpt | strip_html | truncate: 200 }}</p>
-      
       <!-- <div class="featured-post-meta">
         {% if include.post.author %}
           {% assign author = site.data.authors[include.post.author] %}
