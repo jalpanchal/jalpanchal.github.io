@@ -1,9 +1,32 @@
 ---
 title: "All Stories"
-layout: stories
+layout: splash
 permalink: /stories/
+author_profile: false
+classes: wide
 ---
 
-# All Stories
+<h1>All Stories</h1>
 
-Browse through our collection of articles and stories.
+{% assign featured_posts = site.posts | where: "featured", true %}
+{% if featured_posts.size > 0 %}
+  <div class="featured-posts-section">
+    <h2 class="section-title">Featured Stories</h2>
+    <div class="featured-posts">
+      {% for post in featured_posts limit:3 %}
+        {% include featuredbox_wrapper.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<div class="latest-posts-section">
+  <h2 class="section-title">Latest Stories</h2>
+  <div class="card-grid">
+    {% for post in site.posts %}
+      {% unless post.featured and featured_posts contains post %}
+        {% include post_card.html post=post %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,49 @@
+{% comment %}
+  _includes/featured-post-card.html
+  
+  Usage:
+  {% include featured-post-card.html post=post %}
+{% endcomment %}
+
+<div class="featured-post">
+  <div class="featured-post-inner">
+    <div class="featured-post-image">
+      <a href="{{ include.post.url | relative_url }}">
+        {% if include.post.header.teaser %}
+          <img src="{{ include.post.header.teaser | relative_url }}" alt="{{ include.post.title }}">
+        {% else %}
+          <img src="{{ site.teaser | relative_url }}" alt="{{ include.post.title }}">
+        {% endif %}
+      </a>
+      {% if include.post.tags[0] %}
+        <div class="card-tags">
+          {% for tag in include.post.tags limit:2 %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="featured-post-content">
+      <h2><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h2>
+      <p class="excerpt">{{ include.post.excerpt | strip_html | truncate: 200 }}</p>
+      
+      <div class="featured-post-meta">
+        {% if include.post.author %}
+          {% assign author = site.data.authors[include.post.author] %}
+          <div class="author-info">
+            {% if author.avatar %}
+              <img class="author-avatar" src="{{ author.avatar | relative_url }}" alt="{{ author.name }}">
+            {% endif %}
+            <div class="author-details">
+              <span class="author-name">{{ author.name | default: include.post.author }}</span>
+              <span class="post-date">{{ include.post.date | date: "%d %b %Y" }}</span>
+            </div>
+          </div>
+        {% endif %}
+        <div class="bookmark-icon">
+          <i class="fas fa-bookmark"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
