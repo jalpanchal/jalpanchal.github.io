@@ -1,4 +1,4 @@
-/* Mediumish-style Featured Posts for Minimal Mistakes */
+/* Mediumish-style Featured Posts for Minimal Mistakes - Improved Responsiveness */
 
 .listfeaturedtag {
   border: 1px solid rgba(0,0,0,.125);
@@ -7,14 +7,21 @@
   background-color: #fff;
   margin-bottom: 30px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .listfeaturedtag:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
+/* Container for the featured posts - now with max-width for single page layouts */
 .featured-posts-container {
   padding: 20px 0;
+  max-width: 1200px; /* Set a max-width for wider layouts */
+  margin: 0 auto; /* Center the container */
+  width: 100%;
 }
 
 .featured-posts-row {
@@ -22,6 +29,7 @@
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  justify-content: center; /* Center the cards */
 }
 
 .featured-post-column {
@@ -34,10 +42,49 @@
   max-width: 100%;
 }
 
+/* Responsive breakpoints - adjust these to modify card sizes at different screen widths */
+@media (min-width: 576px) {
+  .featured-post-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .featured-post-column {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .featured-post-column {
+    flex: 0 0 33.333333%; /* Three cards per row on very wide screens */
+    max-width: 33.333333%;
+  }
+}
+
+/* This is critical for single page layouts */
+.row.h-100 {
+  flex-wrap: wrap;
+  min-height: 250px; /* Minimum height to prevent excessive stretching */
+  max-height: 350px; /* Maximum height to prevent cards from being too tall */
+}
+
+@media (max-width: 991px) {
+  .row.h-100 {
+    flex-direction: column;
+    height: auto !important;
+    min-height: auto;
+    max-height: none;
+  }
+  
+  .col-12.col-lg-5, .col-12.col-lg-7 {
+    height: auto;
+  }
+  
+  .col-12.col-lg-5 {
+    min-height: 200px; /* Fixed height for image container on mobile */
   }
 }
 
@@ -57,12 +104,18 @@
 .listfeaturedtag .card-body {
   flex: 1 1 auto;
   padding: 1.25rem;
+  overflow: hidden; /* Prevent text overflow */
 }
 
 .listfeaturedtag .card-title {
   font-weight: 700;
   font-size: 1.3rem;
   margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
 }
 
 .listfeaturedtag .card-text {
@@ -71,6 +124,11 @@
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
 }
 
 .featured-box-img-cover {
@@ -117,6 +175,9 @@
 .author-meta {
   flex-grow: 1;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-name {
@@ -131,6 +192,8 @@
 .post-read-more {
   display: flex;
   align-items: center;
+  margin-left: 10px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .post-read-more svg {
@@ -207,4 +270,39 @@
   display: block;
   clear: both;
   content: "";
+}
+
+/* Single page layout adjustments */
+.page .featured-posts-container {
+  padding: 0;
+}
+
+.page .featured-post-column {
+  margin-bottom: 20px;
+}
+
+/* Adjust card dimensions for different container widths */
+@media (min-width: 992px) {
+  /* For narrow containers (like single page layouts) */
+  .page__content .featured-post-column,
+  .archive .featured-post-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* For wider containers (>768px but with narrow parent) */
+  .page__content .row.h-100,
+  .archive .row.h-100 {
+    flex-direction: row;
+    height: 250px !important;
+  }
+}
+
+/* Wider containers can have more cards per row */  
+@media (min-width: 1400px) {
+  .page__content .featured-post-column,
+  .archive .featured-post-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }

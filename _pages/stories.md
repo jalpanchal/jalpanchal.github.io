@@ -14,7 +14,7 @@ classes: wide
     <h2 class="section-title">Featured Stories</h2>
     <div class="featured-posts">
       {% for post in featured_posts limit:3 %}
-        {% include featuredbox_wrapper.html post=post %}
+        {% include featured_post_card.html post=post %}
       {% endfor %}
     </div>
   </div>

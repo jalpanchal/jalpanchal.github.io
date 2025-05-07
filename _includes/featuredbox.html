@@ -1,46 +1,77 @@
-{% comment %}
-  _includes/post-card.html
-  
-  Usage:
-  {% include post-card.html post=post %}
-{% endcomment %}
-
-<div class="card">
-  <div class="card-image">
-    <a href="{{ include.post.url | relative_url }}">
-      {% if include.post.header.teaser %}
-        <img src="{{ include.post.header.teaser | relative_url }}" alt="{{ include.post.title }}">
-      {% else %}
-        <img src="{{ site.teaser | relative_url }}" alt="{{ include.post.title }}">
-      {% endif %}
-    </a>
-    {% if include.post.tags[0] %}
-      <div class="card-tags">
-        {% for tag in include.post.tags limit:2 %}
-          <span class="tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-    {% endif %}
-  </div>
-  <div class="card-content">
-    <h2 class="card-title"><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h2>
-    <p class="card-excerpt">{{ include.post.excerpt | strip_html | truncate: 160 }}</p>
-    <div class="card-meta">
-      {% if include.post.author %}
-        <div class="author-info">
-          {% assign author = site.data.authors[include.post.author] %}
-          {% if author.avatar %}
-            <img class="author-avatar" src="{{ author.avatar | relative_url }}" alt="{{ author.name }}">
-          {% endif %}
-          <div class="author-details">
-            <span class="author-name">{{ author.name | default: include.post.author }}</span>
-            <span class="post-date">{{ include.post.date | date: "%d %b %Y" }}</span>
+<!-- Featured Posts Section in Mediumish Style -->
+<div class="featured-posts-container">
+    <div class="featured-posts-row">
+      {% for post in site.posts %}
+        {% if post.featured %}
+        <!-- begin post -->
+        <div class="featured-post-column">
+          <div class="listfeaturedtag h-100">
+            <div class="row h-100">
+              <div class="col-12 col-md-12 col-lg-5 pr-lg-0">
+                <div class="h-100">
+                  <div class="wrapthumbnail">
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                      <img class="featured-box-img-cover" src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}" alt="{{ post.title }}">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-12 col-lg-7">
+                <div class="h-100 card-group">
+                  <div class="card">
+                    <div class="card-body">
+                      <h2 class="card-title">
+                        <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                        {% if post.rating %}
+                        <div class="mb-2 mt-2 font-weight-normal">
+                          {% for i in (1..post.rating) %}
+                            <span class="rating-star">★</span>
+                          {% endfor %}
+                        </div>
+                        {% endif %}
+                      </h2>
+                      <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:25 }}</h4>
+                    </div>
+                    <div class="card-footer b-0 bg-white mt-auto">
+                      <div class="wrapfooter">
+                        {% if post.author %}
+                          {% assign author = site.data.authors[post.author] %}
+                          <span class="meta-footer-thumb">
+                            {% if author.avatar %}
+                              <img class="author-thumb" src="{{ site.baseurl }}{{ author.avatar }}" alt="{{ author.name }}">
+                            {% else %}
+                              <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.name }}">
+                            {% endif %}
+                          </span>
+                          <span class="author-meta">
+                            <span class="post-name">
+                              {% if author.web %}
+                                <a target="_blank" href="{{ author.web }}">{{ author.name }}</a>
+                              {% else %}
+                                {{ author.name }}
+                              {% endif %}
+                            </span><br/>
+                        {% endif %}
+                        <span class="post-date">{{ post.date | date_to_string }}</span>
+                        </span>
+                        <span class="post-read-more">
+                          <a href="{{ site.baseurl }}{{ post.url }}" title="Read Story">
+                            <svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25">
+                              <path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path>
+                            </svg>
+                          </a>
+                        </span>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      {% endif %}
-      <div class="bookmark-icon">
-        <i class="fas fa-bookmark"></i>
-      </div>
+        <!-- end post -->
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
-</div>
