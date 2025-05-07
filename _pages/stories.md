@@ -14,7 +14,7 @@ classes: wide
     <h2 class="section-title">Featured Stories</h2>
     <div class="featured-posts">
       {% for post in featured_posts limit:3 %}
-        {% include featured_post_card.html post=post %}
+        {% include featured-post-card.html post=post %}
       {% endfor %}
     </div>
   </div>
@@ -25,7 +25,7 @@ classes: wide
   <div class="card-grid">
     {% for post in site.posts %}
       {% unless post.featured and featured_posts contains post %}
-        {% include post_card.html post=post %}
+        {% include post-card.html post=post %}
       {% endunless %}
     {% endfor %}
   </div>
