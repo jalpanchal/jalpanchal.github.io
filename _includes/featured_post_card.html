@@ -27,7 +27,7 @@
       <h2><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h2>
       <p class="excerpt">{{ include.post.excerpt | strip_html | truncate: 200 }}</p>
       
-      <div class="featured-post-meta">
+      <!-- <div class="featured-post-meta">
         {% if include.post.author %}
           {% assign author = site.data.authors[include.post.author] %}
           <div class="author-info">
@@ -43,7 +43,7 @@
         <div class="bookmark-icon">
           <i class="fas fa-bookmark"></i>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
