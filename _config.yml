@@ -125,18 +125,32 @@ defaults:
       type: projects
     values:
       layout: single
-      author_profile: true
-      read_time: false
+      author_profile: false
+      read_time: true
       comments: false
-      share: true
-      related: false
+      share: false
+      related: true
       toc: true
       toc_sticky: true
-sass:
-  style: compressed
+  - scope:
+      path: ""
+      type: learning
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: false
+      share: false
+      related: true
+      toc: true
+      toc_sticky: true
+
 # Collections
 collections:
   projects:
+    output: true
+    permalink: /:collection/:path/
+  learning:
     output: true
     permalink: /:collection/:path/
 category_archive:

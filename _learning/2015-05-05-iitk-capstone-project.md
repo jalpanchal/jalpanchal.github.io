@@ -1,12 +1,13 @@
 ---
-title: "UPenn - Infant Simulator"
+title: "UPenn"
 categories:
   - Projects
 tags:
   - Prototyping
   - CAD
-  - Python
-  - Keras
+  - Robot
+  - LabVIEW
+  - Arduino
 # author_profile: false
 # layout: archive
 header:

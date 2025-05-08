@@ -27,7 +27,7 @@
         <h2 class="archive__subtitle">{{ taxonomy[0] }}</h2>
         <div class="entries-{{ entries_layout }}">
             <div class="card-grid">
-                {% for post in taxonomy.last %}
+                {% for post in taxonomy[1] %}
                     {% include post-card-image.html post=post %}
                 {% endfor %}
             </div> 

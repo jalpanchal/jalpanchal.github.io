@@ -1,17 +1,19 @@
 ---
-title: "UPenn - Infant Simulator"
+title: "Manipal"
 categories:
-  - Projects
+  - Learning
 tags:
   - Prototyping
   - CAD
-  - Python
-  - Keras
+  - NeuromotorDisability
+  - courserca
+  - Arduino
+  - Git
 # author_profile: false
 # layout: archive
 header:
   image: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
-  teaser: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
+  teaser : /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
 # toc: true
 # toc_sticky: true
 ---

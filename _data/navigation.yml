@@ -3,8 +3,8 @@ main:
     url: /about/
   - title: "Projects"
     url: /projects/
-  - title: "Posts"
-    url: /posts/
+  - title: "Learning"
+    url: /learning/
   - title: "Tags"
     url: /tags/
   - title: "Resume"
