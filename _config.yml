@@ -121,5 +121,3 @@ tag_archive:
   type: liquid
   path: /tags/
 
-head_scripts:
-  - /assets/css/custom.css

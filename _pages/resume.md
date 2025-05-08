@@ -5,14 +5,18 @@ permalink: /resume/
 author_profile: false
 toc: true
 toc_label: "Contents"
-toc_icon: "file-alt"
+# toc_icon: "file-alt"
 toc_sticky: true
+toc:
+    min_level: 1
+    max_level: 2
 ---
 
 <div class="download-button">
     <a href="/assets/files/JalPanchal_Resume_Mar2025.pdf" class="btn btn--primary btn--large"><i class="fas fa-download"></i> Download PDF Resume</a>
 </div>
 
+{% include toc.html %}
 
 
 ## Summary
