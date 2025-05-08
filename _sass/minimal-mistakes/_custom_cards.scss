@@ -73,23 +73,27 @@
   opacity: 1;
   
   .tag {
-    background-color: #d2dbe1;
-    color: rgb(0, 0, 0);
-    padding: 0.1em 0.5em;
-    border-radius: 10px;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0.2em 0.8em;
+    border-radius: 7px;
     font-size: 0.6em;
     font-weight: 600;
     text-transform: capitalize;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+    border: 1px solid #d2dbe1;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 
     &:hover {
-      background-color: #bbc4cb;
+      background-color: #f0f2f5;
+      border-color: #bbc4cb;
     }
 
     &.active {
       background-color: #444;
-      color: #fff;
+      color: #ffffff;
+      border-color: #444;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
   }
 }
