@@ -1,0 +1,30 @@
+{% comment %}
+  _includes/post-card.html
+  
+  Usage:
+  {% include post-card.html post=post %}
+{% endcomment %}
+<div class="card" onclick="location.href='{{ include.post.url | relative_url }}'">
+  <div class="card">
+    <div class="card-image-big">
+      <a href="{{ include.post.url | relative_url }}">
+        {% if include.post.header.teaser %}
+          <img src="{{ include.post.header.teaser | relative_url }}" alt="{{ include.post.title }}">
+        {% else %}
+          <img src="{{ site.teaser | relative_url }}" alt="{{ include.post.title }}">
+        {% endif %}
+      </a>
+    </div>
+    <div class="card-content-big">
+      <h3 class="card-title-big"><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>
+      {% if include.post.tags[0] %}
+        <hr class="tags-separator">
+        <div class="card-tags">
+          {% for tag in include.post.tags limit:2 %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

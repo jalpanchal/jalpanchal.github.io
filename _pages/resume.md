@@ -16,8 +16,6 @@ toc:
     <a href="/assets/files/JalPanchal_Resume_Mar2025.pdf" class="btn btn--primary btn--large"><i class="fas fa-download"></i> Download PDF Resume</a>
 </div>
 
-{% include toc.html %}
-
 
 ## Summary
 
