@@ -37,8 +37,8 @@ breadcrumbs:
   enabled: true
   separator: " / "
   home: "Home"
-  archive: "Archive"
-  categories: "Categories"
+  projects: "Projects"
+  activity: "Activity"
   tags: "Tags"
 
 #updates to use local files
@@ -70,6 +70,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-toc
 
 author:
   name   : "Jal Panchal"
@@ -99,13 +100,14 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: archive
       author_profile: false
       read_time: true
-      comments: true
-      share: true
+      comments: false
+      share: false
       related: true
-      enable_copy_code_button: true
+      enable_copy_code_button: false
+      toc: true
   # _pages
   - scope:
       path: "_pages"
@@ -113,7 +115,30 @@ defaults:
     values:
       layout: single
       author_profile: false
-
+      toc: true
+      sidebar:
+        - toc
+      
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: true
+      related: false
+      toc: true
+      toc_sticky: true
+sass:
+  style: compressed
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
 category_archive:
   type: liquid
   path: /categories/

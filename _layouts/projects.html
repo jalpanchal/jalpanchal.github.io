@@ -3,6 +3,6 @@ layout: splash
 ---
 
 <h1>Projects by Labels</h1>
-{{ content }}
-
-{% include posts-tagwise-cards.html taxonomies=site.tags %}
+{% for post in site.projects %}
+    {% include posts-tagwise-cards.html taxonomies=site.tags post=post %}
+{% endfor %}
