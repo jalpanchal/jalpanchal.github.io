@@ -3,13 +3,13 @@ layout: single
 title: "Resume"
 permalink: /resume/
 author_profile: false
-toc: true
-toc_label: "Contents"
-# toc_icon: "file-alt"
-toc_sticky: true
-toc:
-    min_level: 1
-    max_level: 2
+toc: false
+# toc_label: "Contents"
+# # toc_icon: "file-alt"
+# toc_sticky: true
+# toc:
+#     min_level: 1
+#     max_level: 2
 ---
 
 <div class="download-button">
