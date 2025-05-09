@@ -9,7 +9,7 @@ tags:
   - LabVIEW
   - Arduino
 # author_profile: false
-layout: single-left-toc
+layout: single
 header:
   image: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
   teaser : /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
