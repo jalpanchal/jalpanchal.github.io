@@ -1,0 +1,28 @@
+---
+layout: default  # Or you can use 'none' if you want a clean slate
+title: "Custom Layout"
+---
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+
+<div class="custom-layout-container">
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</div>
+
+
+<style>
+.custom-layout-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+</style>

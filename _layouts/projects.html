@@ -1,17 +1,7 @@
 ---
-layout: splash
+layout: single
+toc: false
 ---
-{% assign breadcrumbs_enabled = site.breadcrumbs %}
-{% if page.breadcrumbs != null %}
-  {% assign breadcrumbs_enabled = page.breadcrumbs %}
-{% endif %}
-{% if page.url != "/" and breadcrumbs_enabled %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<h1>Projects</h1>
 
 <!-- Tag Filters -->
 <div class="card-tags tag-filters">
