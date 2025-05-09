@@ -1,33 +1,8 @@
 ---
-layout: splash
+layout: single
 ---
 
 <h1>Learning Dashboard</h1>
-
-
-<!-- <div class="card-grid">
-    {% for project in site.learning %}
-        {% include post-card-image.html post=project %}
-    {% endfor %}
-</div>  -->
-<!-- 
-{% assign tags = site.learning | map: "tags" | flatten | uniq | sort %}
-
-{% for tag in tags %}
-  <section id="{{ tag | slugify }}" class="taxonomy__section">
-    <h2 class="archive__subtitle">{{ tag }}</h2>
-    <div class="entries-grid">
-      <div class="card-grid">
-        {% for project in site.learning %}
-          {% if project.tags contains tag %}
-            {% include post-card-image.html post=project %}
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-  </section>
-{% endfor %} -->
 
 <!-- Tag Filters -->
 <div class="card-tags tag-filters">

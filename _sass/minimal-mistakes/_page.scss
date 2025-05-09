@@ -13,8 +13,7 @@
   animation-delay: 0.15s;
 
   @include breakpoint($x-large) {
-    // max-width: $max-width;
-    max-width: 900px; 
+    max-width: $max-width;
   }
 }
 
@@ -37,15 +36,13 @@ body {
 .page {
   @include breakpoint($large) {
     float: inline-end;
-    // width: calc(100% - #{$right-sidebar-width-narrow});
-    // padding-inline-end: $right-sidebar-width-narrow;
-    width : 100%
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-inline-end: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
-    // width: calc(100% - #{$right-sidebar-width});
-    // padding-inline-end: $right-sidebar-width;
-    width : 100%
+    width: calc(100% - #{$right-sidebar-width});
+    padding-inline-end: $right-sidebar-width;
   }
 
   .page__inner-wrap {
