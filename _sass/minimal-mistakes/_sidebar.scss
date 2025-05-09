@@ -117,6 +117,39 @@
   }
 }
 
+.sidebar__left {
+  margin-bottom: 1em;
+
+  @include breakpoint($large) {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    width: $right-sidebar-width-narrow; // Keep the same width as the right sidebar
+    margin-inline-start: -1 * $right-sidebar-width-narrow;
+    padding-inline-end: 1em;
+    z-index: 10;
+
+    &.sticky {
+      @include clearfix();
+      position: -webkit-sticky;
+      position: sticky;
+      top: 2em;
+      float: inline-start;
+
+      .toc {
+        .toc__menu {
+          overflow-y: auto;
+          max-height: calc(100vh - 7em);
+        }
+      }
+    }
+  }
+
+  @include breakpoint($x-large) {
+    width: $right-sidebar-width;
+    margin-inline-start: -1 * $right-sidebar-width;
+  }
+}
 /*
    Author profile and links
    ========================================================================== */
