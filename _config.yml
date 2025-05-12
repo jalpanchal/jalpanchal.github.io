@@ -71,6 +71,8 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-toc
+  - jekyll-react
+  
 
 author:
   name   : "Jal Panchal"
