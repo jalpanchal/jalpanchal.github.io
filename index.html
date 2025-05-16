@@ -6,4 +6,108 @@ title: Home
 
 <!-- <iframe src="/assets/code/sine_wave_plot.html" width="100%" height="600"></iframe> -->
 
-<iframe src="/assets/code/ppg_filter_interactive.html" width="100%" height="900"></iframe>
+<div id="ppg-instructions" class="instructions-container">
+  <h2>Interactive PPG Filtering Game - How to Play</h2>
+  <p>Welcome to the PPG Filtering Game! Your goal is to clean the noisy PPG signal and match it as closely as possible to the clean reference signal. Aim for an <strong>RMSE (Root Mean Squared Error) below 0.12</strong> to win!</p>
+  <ul>
+    <li><strong>Highpass Filter:</strong> Removes low-frequency noise (e.g., baseline drift). Adjust the cutoff frequency to control the minimum frequency that passes through.</li>
+    <li><strong>Lowpass Filter:</strong> Removes high-frequency noise (e.g., motion artifacts). Adjust the cutoff frequency to control the maximum frequency that passes through.</li>
+    <li><strong>Rolling Mean Filter:</strong> Smooths short-term fluctuations. Adjust the window size to control the level of smoothing.</li>
+  </ul>
+  <h3>How to Play:</h3>
+  <ol>
+    <li>Start with the noisy signal (gray) and observe how it differs from the clean signal (black).</li>
+    <li>Apply the filters one by one using the checkboxes.</li>
+    <li>Adjust the sliders to find the optimal cutoff frequencies and window size.</li>
+    <li>Watch the RMSE in the plot title - aim to reduce it below 0.12 to turn the filtered signal (blue) green.</li>
+    <li>Experiment and have fun! There are multiple ways to reach the target RMSE.</li>
+  </ol>
+  <p class="tips">💡 <strong>Tip:</strong> Small adjustments can make a big difference. Fine-tune your settings to achieve the best possible match.</p>
+  <p>Need help with biosignal processing? <a href="/contact">Let's connect</a>!</p>
+  <p>If you manage to get the RMSE below 0.12, take a screenshot of your filtered plot and <a href="mailto:jalpanchal1+ppg@gmail.com?subject=PPG Filtering Game Screenshot">send it to me!</a> I'd love to see your results.</p>
+
+  <div class="interactive-container">
+    <iframe src="/assets/code/ppg_filter_interactive.html" class="interactive-frame" frameborder="0"></iframe>
+  </div>
+</div>
+
+<style>
+.instructions-container {
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+  text-align: center;
+}
+
+.instructions-container h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.instructions-container ul, .instructions-container ol {
+  margin-left: 20px;
+  color: #555;
+  text-align: left;
+}
+
+.instructions-container li {
+  margin-bottom: 10px;
+}
+
+.instructions-container .tips {
+  font-style: italic;
+  color: #777;
+  margin-top: 15px;
+}
+
+.instructions-container a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.instructions-container a:hover {
+  text-decoration: underline;
+}
+
+/* .interactive-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.interactive-frame {
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+} */
+.interactive-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.interactive-frame {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+}
+  
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+

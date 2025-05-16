@@ -1,12 +1,9 @@
 main:
-  - title: "About"
-    url: /about/
   - title: "Projects"
     url: /projects/
-  - title: "Learning"
-    url: /learning/
-  - title: "Tags"
-    url: /tags/
   - title: "Resume"
     url: /resume/
-  
+  - title: "About"
+    url: /about/
+  - title: "Contact"
+    url: /contact/
