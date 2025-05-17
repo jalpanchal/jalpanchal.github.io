@@ -7,7 +7,7 @@ toc: false
 <div class="full-width-section">
   <div class="container flex-container">
     <div class="photo-wrapper">
-      <img src="{{ '/assets/images/jal.png' | relative_url }}" alt="Your Name" />
+      <img src="{{ '/assets/images/jal.png' | relative_url }}" alt="Jal Panchal" />
     </div>
     <div class="welcome-text">
       <p>
@@ -19,14 +19,31 @@ toc: false
   </div>
 </div>
 
-<div class="full-width-section white-section">
-  <div class="container instructions-container">
-    <h2>Interactive PPG Filtering Game - How to Play</h2>
-    <p>Welcome to the PPG Filtering Game! Your goal is to clean the noisy PPG signal and match it as closely as possible to the clean reference signal. Aim for an <strong>RMSE (Root Mean Squared Error) below 0.12</strong> to win!</p>
+
+<!-- PPG Video Section -->
+<div class="full-width-section ppg-intro">
+  <div class="container">
+    <p>
+    <strong style="color: rgb(0, 0, 0); font-size: 1.2em;">
+      Ever wondered how clean biosignal data is extracted from raw, noisy signals?
+      Watch this quick demo and then try it yourself in the interactive game below!
+    </strong>
+    </p>
+    <video class="ppg-video" autoplay muted loop>
+      <source src="/assets/videos/ppg_cleaning.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  <div class="instructions-container">
+    <p>Your goal is to clean the noisy PPG signal and match it as closely as possible to the clean reference signal. Aim for an <strong>RMSE (Root Mean Squared Error) below 0.12</strong> to win!</p>
+
+    <div class="interactive-container">
+      <iframe src="/assets/code/ppg_filter_interactive.html" class="interactive-frame" frameborder="0"></iframe>
+    </div>
     <ul>
-      <li><strong>Highpass Filter:</strong> Removes low-frequency noise (e.g., baseline drift). Adjust the cutoff frequency to control the minimum frequency that passes through.</li>
-      <li><strong>Lowpass Filter:</strong> Removes high-frequency noise (e.g., motion artifacts). Adjust the cutoff frequency to control the maximum frequency that passes through.</li>
-      <li><strong>Rolling Mean Filter:</strong> Smooths short-term fluctuations. Adjust the window size to control the level of smoothing.</li>
+      <li><strong>Highpass Filter:</strong> Removes low-frequency noise (e.g., baseline drift).</li>
+      <li><strong>Lowpass Filter:</strong> Removes high-frequency noise (e.g., motion artifacts).</li>
+      <li><strong>Rolling Mean Filter:</strong> Smooths short-term fluctuations.</li>
     </ul>
     <h3>How to Play:</h3>
     <ol>
@@ -39,13 +56,9 @@ toc: false
     <p class="tips">💡 <strong>Tip:</strong> Small adjustments can make a big difference. Fine-tune your settings to achieve the best possible match.</p>
     <p>Need help with biosignal processing? <a href="/contact">Let's connect</a>!</p>
     <p>If you manage to get the RMSE below 0.12, take a screenshot of your filtered plot and <a href="mailto:jalpanchal1+ppg@gmail.com?subject=PPG Filtering Game Screenshot">send it to me!</a> I'd love to see your results.</p>
-
-    <div class="interactive-container">
-      <iframe src="/assets/code/ppg_filter_interactive.html" class="interactive-frame" frameborder="0"></iframe>
-    </div>
+  </div>
   </div>
 </div>
-
 
 
 <style>
@@ -54,32 +67,25 @@ toc: false
   align-items: center;
   gap: 2rem;
 }
-.photo-wrapper {
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any default padding */
-}
 .photo-wrapper img {
   max-width: 500px;
   width: 100%;
   height: auto;
   border-radius: 10px;
+  margin-bottom: 0; /* Remove padding below photo */
 }
-
 .welcome-text {
   flex: 1;
   color: white;
   max-width: 700px;
-  padding:0 100px; /* Add some padding for better spacing */
+  padding: 0 40px;
   text-align: left;
 }
-
-/* Responsive: stack photo on top on narrow screens */
 @media (max-width: 600px) {
   .flex-container {
     flex-direction: column;
     text-align: center;
   }
-  
   .photo-wrapper img {
     max-width: 200px;
     margin-bottom: 1rem;
@@ -87,9 +93,6 @@ toc: false
     margin-right: auto;
   }
 }
-
-
-/* Full-width black section */
 .full-width-section {
   width: 100vw;
   position: relative;
@@ -97,35 +100,50 @@ toc: false
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  padding: 2rem 0;
   background-color: #000000;
-  padding: 0rem 0;
-  margin-bottom: 10px; /* Small gap between sections */
+  margin-bottom: 20px;
 }
-
-/* White background for the PPG game section */
+.transition-section {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 0;
+  border-top: 2px solid #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+}
+.ppg-intro {
+  background-color: #f8f6f6;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+.ppg-video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 15px;
+  border: 2px solid #060606;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
 .white-section {
   background-color: #ffffff;
-  color: #333; /* Dark text for readability */
-}
-
-/* PPG game styling */
-.instructions-container {
-  border: 2px solid #ddd;
-  /* border-radius: 12px; */
-  padding: 1px 30px;
-  margin-bottom: 1px;
-  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
-  animation: fadeIn 0.8s ease-in-out;
-  background-color: #ffffff;
   color: #333;
+}
+.instructions-container {
+  background-color: #fbfbfb;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+  text-align: left;
 }
 
 .instructions-container h2 {
   font-size: 1.8em;
   color: #333;
-  margin-bottom: 1px;
-  margin-top: 0; /* Remove the default margin */
-  padding-top: 10px; /* Ensure no padding is added */
+  margin-bottom: 10px;
 }
 
 .instructions-container ul, .instructions-container ol {
@@ -135,7 +153,7 @@ toc: false
 }
 
 .instructions-container li {
-  margin-bottom: 1px;
+  margin-bottom: 10px;
 }
 
 .instructions-container .tips {
@@ -158,7 +176,7 @@ toc: false
   display: flex;
   justify-content: center;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .interactive-frame {
@@ -168,7 +186,7 @@ toc: false
   border-radius: 12px;
   border: 2px solid #ddd;
 }
-
+  
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }

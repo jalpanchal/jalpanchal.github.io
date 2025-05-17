@@ -4,43 +4,140 @@ title: Home
 ---
 
 
-<!-- <iframe src="/assets/code/sine_wave_plot.html" width="100%" height="600"></iframe> -->
-
-<div id="ppg-instructions" class="instructions-container">
-  <h2>Interactive PPG Filtering Game - How to Play</h2>
-  <p>Welcome to the PPG Filtering Game! Your goal is to clean the noisy PPG signal and match it as closely as possible to the clean reference signal. Aim for an <strong>RMSE (Root Mean Squared Error) below 0.12</strong> to win!</p>
-  <ul>
-    <li><strong>Highpass Filter:</strong> Removes low-frequency noise (e.g., baseline drift). Adjust the cutoff frequency to control the minimum frequency that passes through.</li>
-    <li><strong>Lowpass Filter:</strong> Removes high-frequency noise (e.g., motion artifacts). Adjust the cutoff frequency to control the maximum frequency that passes through.</li>
-    <li><strong>Rolling Mean Filter:</strong> Smooths short-term fluctuations. Adjust the window size to control the level of smoothing.</li>
-  </ul>
-  <h3>How to Play:</h3>
-  <ol>
-    <li>Start with the noisy signal (gray) and observe how it differs from the clean signal (black).</li>
-    <li>Apply the filters one by one using the checkboxes.</li>
-    <li>Adjust the sliders to find the optimal cutoff frequencies and window size.</li>
-    <li>Watch the RMSE in the plot title - aim to reduce it below 0.12 to turn the filtered signal (blue) green.</li>
-    <li>Experiment and have fun! There are multiple ways to reach the target RMSE.</li>
-  </ol>
-  <p class="tips">💡 <strong>Tip:</strong> Small adjustments can make a big difference. Fine-tune your settings to achieve the best possible match.</p>
-  <p>Need help with biosignal processing? <a href="/contact">Let's connect</a>!</p>
-  <p>If you manage to get the RMSE below 0.12, take a screenshot of your filtered plot and <a href="mailto:jalpanchal1+ppg@gmail.com?subject=PPG Filtering Game Screenshot">send it to me!</a> I'd love to see your results.</p>
-
-  <div class="interactive-container">
-    <iframe src="/assets/code/ppg_filter_interactive.html" class="interactive-frame" frameborder="0"></iframe>
+<div class="full-width-section">
+  <div class="container flex-container">
+    <div class="photo-wrapper">
+      <img src="{{ '/assets/images/jal.png' | relative_url }}" alt="Jal Panchal" />
+    </div>
+    <div class="welcome-text">
+      <p>
+        <strong style="color: white; font-size: 1.2em;">
+          Hi! I'm Jal, a passionate researcher and engineer with a deep interest in digital health, biomedical systems, and human-centered technology. Dive in to explore my projects, thoughts, and experiments.
+        </strong>
+      </p>
+    </div>
   </div>
 </div>
 
+
+<!-- PPG Video Section -->
+<div class="full-width-section ppg-intro">
+  <div class="container">
+    <p>
+    <strong style="color: rgb(0, 0, 0); font-size: 1.2em;">
+      Ever wondered how clean biosignal data is extracted from raw, noisy signals?
+      Watch this quick demo and then try it yourself in the interactive game below!
+    </strong>
+    </p>
+    <video class="ppg-video" autoplay muted loop>
+      <source src="/assets/videos/ppg_cleaning.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  <div class="instructions-container">
+    <p>Your goal is to clean the noisy PPG signal and match it as closely as possible to the clean reference signal. Aim for an <strong>RMSE (Root Mean Squared Error) below 0.12</strong> to win!</p>
+
+    <div class="interactive-container">
+      <iframe src="/assets/code/ppg_filter_interactive.html" class="interactive-frame" frameborder="0"></iframe>
+    </div>
+    <ul>
+      <li><strong>Highpass Filter:</strong> Removes low-frequency noise (e.g., baseline drift).</li>
+      <li><strong>Lowpass Filter:</strong> Removes high-frequency noise (e.g., motion artifacts).</li>
+      <li><strong>Rolling Mean Filter:</strong> Smooths short-term fluctuations.</li>
+    </ul>
+    <h3>How to Play:</h3>
+    <ol>
+      <li>Start with the noisy signal (gray) and observe how it differs from the clean signal (black).</li>
+      <li>Apply the filters one by one using the checkboxes.</li>
+      <li>Adjust the sliders to find the optimal cutoff frequencies and window size.</li>
+      <li>Watch the RMSE in the plot title - aim to reduce it below 0.12 to turn the filtered signal (blue) green.</li>
+      <li>Experiment and have fun! There are multiple ways to reach the target RMSE.</li>
+    </ol>
+    <p class="tips">💡 <strong>Tip:</strong> Small adjustments can make a big difference. Fine-tune your settings to achieve the best possible match.</p>
+    <p>Need help with biosignal processing? <a href="/contact">Let's connect</a>!</p>
+    <p>If you manage to get the RMSE below 0.12, take a screenshot of your filtered plot and <a href="mailto:jalpanchal1+ppg@gmail.com?subject=PPG Filtering Game Screenshot">send it to me!</a> I'd love to see your results.</p>
+  </div>
+  </div>
+</div>
+
+
 <style>
-.instructions-container {
+.flex-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.photo-wrapper img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0; /* Remove padding below photo */
+}
+.welcome-text {
+  flex: 1;
+  color: white;
+  max-width: 700px;
+  padding: 0 40px;
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .photo-wrapper img {
+    max-width: 200px;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.full-width-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 2rem 0;
+  background-color: #000000;
+  margin-bottom: 20px;
+}
+.transition-section {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 0;
+  border-top: 2px solid #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+}
+.ppg-intro {
+  background-color: #f8f6f6;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+.ppg-video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 15px;
+  border: 2px solid #060606;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.white-section {
   background-color: #ffffff;
+  color: #333;
+}
+.instructions-container {
+  background-color: #fbfbfb;
   border: 2px solid #ddd;
   border-radius: 12px;
   padding: 20px 30px;
   margin-bottom: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.8s ease-in-out;
-  text-align: center;
+  text-align: left;
 }
 
 .instructions-container h2 {
@@ -75,20 +172,6 @@ title: Home
   text-decoration: underline;
 }
 
-/* .interactive-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.interactive-frame {
-  width: 100%;
-  max-width: 1200px;
-  height: 800px;
-  border-radius: 12px;
-  border: 2px solid #ddd;
-} */
 .interactive-container {
   display: flex;
   justify-content: center;
@@ -109,5 +192,6 @@ title: Home
   to { opacity: 1; transform: translateY(0); }
 }
 </style>
+
 
 
