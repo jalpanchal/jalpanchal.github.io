@@ -73,23 +73,27 @@ title: Home
     {% assign featured_projects = site.projects | where: "featured", true %}
     <div class="card-grid">
     {% for project in featured_projects limit:3 %}
-    <div class="project-card">
         {% include post-card-image.html post=project %}
-    </div>
+
     {% endfor %}
   </div>
   </div>
   <p>
-    <strong style="color: rgb(0, 0, 0); font-size: 1.2em;">
-      Check out my <a href="/projects">Projects</a> page for details on my projects.
-    </strong>
-    </p>
+  <strong style="color: rgb(0, 0, 0); font-size: 1.2em;">
+    Interested in learning more about my work?
+  </strong>
+  </p>
+    <div class="card-tags">
+      <a href="/projects/" class="tag">PROJECTS</a>
+      <a href="/resume/" class="tag">RESUME</a>
+      <a href="/about/" class="tag">ABOUT ME</a>
+    </div>
   </div>
 </div>
 
 
 <!-- Contact and Links Section -->
-<div class="full-width-section white-section contact-links">
+<!-- <div class="full-width-section white-section contact-links">
   <div class="container">
     <div class="contact-left">
       <p>
@@ -117,7 +121,7 @@ title: Home
       </ul>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <style>
@@ -328,6 +332,42 @@ title: Home
   color: #4CAF50;
   text-decoration: underline;
 }
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  z-index: 2;
+  opacity: 1;
+  
+  .tag {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0.2em 0.8em;
+    border-radius: 7px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 1px solid #d2dbe1;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+    &:hover {
+      background-color: #6a6b6d;
+      border-color: #bbc4cb;
+      color : #ffffff
+    }
+
+    &.active {
+      background-color: #444;
+      color: #ffffff;
+      border-color: #444;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
