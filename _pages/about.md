@@ -100,7 +100,7 @@ toc: false
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  padding: 2rem 0;
+  padding: 0rem 0;
   background-color: #000000;
   margin-bottom: 20px;
 }
