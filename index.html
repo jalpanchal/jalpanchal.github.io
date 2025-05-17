@@ -25,7 +25,7 @@ title: Home
   <div class="container">
     <p>
     <strong style="color: rgb(0, 0, 0); font-size: 1.2em;">
-      Ever wondered how clean biosignal data is extracted from raw, noisy signals?
+      Ever wondered how clean biosignal data is extracted from raw, noisy signals?<br>
       Watch this quick demo and then try it yourself in the interactive game below!
     </strong>
     </p>
@@ -83,7 +83,7 @@ title: Home
     Interested in learning more about my work?
   </strong>
   </p>
-    <div class="card-tags">
+    <div class="page-tags">
       <a href="/projects/" class="tag">PROJECTS</a>
       <a href="/resume/" class="tag">RESUME</a>
       <a href="/about/" class="tag">ABOUT ME</a>
@@ -207,7 +207,7 @@ title: Home
 }
 
 .instructions-container h2 {
-  font-size: 1.8em;
+  font-size: 1.0em;
   color: #333;
   margin-bottom: 10px;
 }
@@ -333,7 +333,7 @@ title: Home
   text-decoration: underline;
 }
 
-.card-tags {
+.page-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -346,17 +346,19 @@ title: Home
     color: #333333;
     padding: 0.2em 0.8em;
     border-radius: 7px;
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 600;
     text-transform: capitalize;
     cursor: pointer;
     border: 1px solid #d2dbe1;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
 
     &:hover {
       background-color: #6a6b6d;
       border-color: #bbc4cb;
-      color : #ffffff
+      color : #ffffff;
+      text-decoration: none;
     }
 
     &.active {
