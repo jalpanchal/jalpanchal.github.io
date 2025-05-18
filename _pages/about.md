@@ -1,19 +1,20 @@
 ---
 permalink: /about/
 title: "About"
-layout: splash
+layout: single
+toc: false
 ---
 
 <div class="full-width-container">
   <div class="image-scroller">
     <img src="/assets/images/jal.png" alt="Image 1" />
     <img src="/assets/images/jal.png" alt="Image 2" />
-    <img src="/assets/images/jal.png" alt="Image 3" />
+    <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Image 3" />
     <img src="/assets/images/jal.png" alt="Image 4" />
     <img src="/assets/images/jal.png" alt="Image 5" />
     <img src="/assets/images/jal.png" alt="Image 6" />
     <img src="/assets/images/jal.png" alt="Image 1" />
-    <img src="/assets/images/jal.png" alt="Image 2" />
+    <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Image 2" />
     <img src="/assets/images/jal.png" alt="Image 3" />
     <img src="/assets/images/jal.png" alt="Image 4" />
     <img src="/assets/images/jal.png" alt="Image 5" />
@@ -48,6 +49,19 @@ body {
   max-width: 200px;
   height: auto;
   border-radius: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.image-scroller img:hover {
+  transform: scale(3) translateY(50%);
+  /* position: relative; */
+  z-index: 999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-scroller:hover {
+  animation-play-state: paused;
+
 }
 
 @keyframes scroll {
