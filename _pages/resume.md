@@ -138,47 +138,77 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
 <!-- Resume Page Component -->
 <div class="education-section">
   <button class="expand-toggle" onclick="toggleDetails('masters-details')">
-    <span>Master's Degree</span>
+    <span>University of Pennsylvania</span>
     <span class="toggle-icon">+</span>
   </button>
   <div id="masters-details" class="details hidden">
-    <p><strong>University of Pennsylvania</strong></p>
-    <p>M.S.E. in Robotics, 2018-2020</p>
-
+    <p><strong>Master of Science in Engineering</strong></p>
+    <p>Concentration: Robotics and Bioengineering, 2020-2022 | Phildelphia, PA</p>
     <ul>
       <li>Specialized in bioengineering, robotics, and machine learning</li>
       <li>Thesis on advanced signal processing for wearable devices</li>
       <li>Independent Study at Rehabilitation Robotics Lab</li>
     </ul>
     <p><b>Award:</b> Outstanding Service Award</p>
-
+    <p><b>Activities:</b> Chair, Professional Council of GAPSA 2020-2021 (Graduate and Professional Student's Assembly)  </p>
   </div>
 
-  <button class="expand-toggle" onclick="toggleDetails('bachelors-details')">
-    <span>Bachelor's Degree</span>
+  <button class="expand-toggle" onclick="toggleDetails('harvard-details')">
+    <span>Harvard University</span>
     <span class="toggle-icon">+</span>
   </button>
-  <div id="bachelors-details" class="details hidden">
-    <p><strong>University of Pennsylvania</strong></p>
-    <p>M.S.E. in Robotics, 2018-2020</p>
+  <div id="harvard-details" class="details hidden">
+    <p><strong>Graduate Couse</strong></p>
+    <p>Wearable Devices and Sensor Data, Fall 2018 | Cambridge, MA</p>
     <ul>
-      <li>Specialized in bioengineering, robotics, and machine learning</li>
-      <li>Thesis on advanced signal processing for wearable devices</li>
-      <li>Projects included autonomous drones, medical robotics, and sensor systems</li>
+      <li>Graduate course on capturing sensor data and building wearable devices</li>
+      <li>Project: Using ST SensorTile</li>
     </ul>
   </div>
 
+  <button class="expand-toggle" onclick="toggleDetails('bachelors-details')">
+    <span>Manipal Institute of Technology</span>
+    <span class="toggle-icon">+</span>
+  </button>
+  <div id="bachelors-details" class="details hidden">
+    <p><strong>Bachelor of Technology</strong></p>
+    <p>Concentration: Mechatronics, 2011-2015 | Manipal, India</p>
+    <ul>
+      <li>Specialized in control theory, building electromechanical systems and prototyping</li>
+      <li>Thesis on Robot tracking system</li>
+      <li>Summer Research Project : Friction Measurement System</li>
+    </ul>
+    <p><b>Award:</b> TMA Pai Gold Medal for Best Outgoing Student 2014-15</p>
+    <p><b>Activities:</b> Technical Secretary, Student Council of MIT (2013-2014)</p>
+  </div>
+
   <button class="expand-toggle" onclick="toggleDetails('conti-edu-details')">
-    <span>Continuous Education</span>
+    <span>Continuous Learning</span>
     <span class="toggle-icon">+</span>
   </button>
   <div id="conti-edu-details" class="details hidden">
-    <p><strong>University of Pennsylvania</strong></p>
-    <p>M.S.E. in Robotics, 2018-2020</p>
+  <p><strong>MIT Bootcamps</strong></p>
+   <ul>
+      <li><a href="https://news.mit.edu/2020/health-care-innovators-strive-to-make-difference-0123">MIT-HMS Healthcare Innovation Bootcamp (2019) (Winner of Pitch Competition)</a></li>
+    </ul>
+    <p><strong>Coursera</strong></p>
     <ul>
-      <li>Specialized in bioengineering, robotics, and machine learning</li>
-      <li>Thesis on advanced signal processing for wearable devices</li>
-      <li>Projects included autonomous drones, medical robotics, and sensor systems</li>
+      <li><a href="/assets/images/certificates/Certificate - The Power of Statistics.pdf">Course: The Power of Statistics (Google)</a></li>
+      <li><a href="/assets/images/certificates/Certificate - Mathematics for Machine Learning Specialization.pdf">Specialization: Mathematics for Machine Learning (Imperial College London)</a></li>
+      <ul>
+      <li>Course: Mathematics for Machine Learning: Linear Algebra</li>
+      <li>Course: Mathematics for Machine Learning: Multivariate Calculus</li>
+      <li>Course: Mathematics for Machine Learning: PCA</li>
+      </ul>
+      <li>Specialization: Machine Learning (DeepLearning.AI)</li>
+      <ul>
+      <li>Course: Supervised Machine Learning: Regression and Classification</li>
+      <li>Course: Advanced Learning Algorithms</li>
+      <li>Course: Unsupervised Learning, Recommenders, Reinforcement Learning</li>
+      </ul>
+      <li><a href="/assets/images/certificates/Certificate - Foundations of Project Management.pdf">Course: Foundations of Project Management (Google)</a></li>
+      <li><a href="/assets/images/certificates/Certificate - Databases and SQL with Python.pdf">Course: Databases and SQL for Data Science with Python (IBM)</a></li>
+      <li><a href="/assets/images/certificates/Certificate - Build Your Portfolio Website with HTML and CSS.pdf">Project: Build Your Portfolio Website with HTML and CSS (Coursera)</a></li>
     </ul>
   </div>
 </div>
