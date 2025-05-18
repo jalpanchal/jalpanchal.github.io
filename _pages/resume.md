@@ -16,10 +16,10 @@ h_max: 2
     <a href="/assets/files/JalPanchal_Resume_Mar2025.pdf" class="btn btn--primary btn--large"><i class="fas fa-download"></i> Download PDF Resume</a>
 </div> -->
 
-
+<div class="download-button"><a href="/assets/files/JalPanchal_Resume_Mar2025.pdf" class="tag">Download Resume</a></div>
 ## Summary
 
-Experienced R&D Scientist with 6+ years in physiological signal processing, clinical validation and product development. Developed a novel stress metric within 6 months, offering innovative insights into user physiological states. Transformed research prototypes into a production-ready product within 2 years. Committed to creating meaningful health solutions through scientific innovation.
+Experienced R&D Scientist with 5+ years in physiological signal processing, clinical validation and product development. Developed a novel stress metric within 6 months, offering innovative insights into user physiological states. Transformed research prototypes into a production-ready product within 2 years. Committed to creating meaningful health solutions through scientific innovation.
 
 
 ## Professional Experience
@@ -210,6 +210,11 @@ Experienced R&D Scientist with 6+ years in physiological signal processing, clin
       <li><a href="/assets/images/certificates/Certificate - Databases and SQL with Python.pdf">Course: Databases and SQL for Data Science with Python (IBM)</a></li>
       <li><a href="/assets/images/certificates/Certificate - Build Your Portfolio Website with HTML and CSS.pdf">Project: Build Your Portfolio Website with HTML and CSS (Coursera)</a></li>
     </ul>
+    <p><strong>Certifications</strong></p>
+    <ul>
+    <li><a href="/assets/images/certificates/citiCompletionCertificate_12226231_55733176.pdf">Group 1 Biomedical Research Investigators and Key Personnel (CITI)</a></li>
+    </ul>
+
   </div>
 </div>
 
@@ -249,6 +254,15 @@ Experienced R&D Scientist with 6+ years in physiological signal processing, clin
     </ul>
     </div>
   </div>
+
+
+## Skills and Tools
+
+
+
+
+
+
 
 <!-- Add this script to handle switching between companies and roles -->
 <script>
@@ -326,13 +340,13 @@ Experienced R&D Scientist with 6+ years in physiological signal processing, clin
   padding: 0;
 }
 
-.company-item {
+.company-item{
   margin-bottom: 15px;
   cursor: pointer;
-  color: #94a3b8;
+  color:rgb(180, 180, 180);
   font-weight: 600;
 }
-.company-item.hover {
+.company-item:hover {
   color:rgb(80, 80, 80);
 }
 
@@ -350,7 +364,7 @@ Experienced R&D Scientist with 6+ years in physiological signal processing, clin
 }
 
 .role-list li {
-  color: #94a3b8;
+  color:rgb(180, 180, 180);
   cursor: pointer;
   margin-bottom: 5px;
 }
@@ -376,11 +390,6 @@ Experienced R&D Scientist with 6+ years in physiological signal processing, clin
   display: block;
 }
 
-
-.active-role {
-  font-weight: bold;
-  color: #007acc;
-}
 
 /* Expandable Section Styles */
 .education-section {
@@ -414,5 +423,42 @@ Experienced R&D Scientist with 6+ years in physiological signal processing, clin
 
 .hidden {
   display: none;
+}
+
+.download-button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: right;
+  z-index: 2;
+  opacity: 1;
+  
+  .tag {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0.2em 0.8em;
+    border-radius: 7px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 1px solid #d2dbe1;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #6a6b6d;
+      border-color: #bbc4cb;
+      color : #ffffff;
+      text-decoration: none;
+    }
+
+    &.active {
+      background-color: #444;
+      color: #ffffff;
+      border-color: #444;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
 }
 </style>
