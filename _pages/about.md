@@ -2,193 +2,56 @@
 permalink: /about/
 title: "About"
 layout: splash
-toc: false
 ---
-<div class="full-width-section">
-  <div class="container flex-container">
-    <div class="photo-wrapper">
-      <img src="{{ '/assets/images/jal.png' | relative_url }}" alt="Jal Panchal" />
-    </div>
-    <div class="welcome-text">
-      <p>
-        <strong style="color: white; font-size: 1.2em;">
-          Hi! I'm Jal, a passionate researcher and engineer with a deep interest in digital health, biomedical systems, and human-centered technology. Dive in to explore my projects, thoughts, and experiments.
-        </strong>
-      </p>
-    </div>
+
+<div class="full-width-container">
+  <div class="image-scroller">
+    <img src="/assets/images/jal.png" alt="Image 1" />
+    <img src="/assets/images/jal.png" alt="Image 2" />
+    <img src="/assets/images/jal.png" alt="Image 3" />
+    <img src="/assets/images/jal.png" alt="Image 4" />
+    <img src="/assets/images/jal.png" alt="Image 5" />
+    <img src="/assets/images/jal.png" alt="Image 6" />
+    <img src="/assets/images/jal.png" alt="Image 1" />
+    <img src="/assets/images/jal.png" alt="Image 2" />
+    <img src="/assets/images/jal.png" alt="Image 3" />
+    <img src="/assets/images/jal.png" alt="Image 4" />
+    <img src="/assets/images/jal.png" alt="Image 5" />
+    <img src="/assets/images/jal.png" alt="Image 6" />
   </div>
 </div>
-
-
-<!-- PPG Video Section -->
-<div class="full-width-section ppg-intro">
-  <div class="container">
-    <p>
-    <strong style="color: rgb(0, 0, 0); font-size: 1.2em;">
-      Ever wondered how clean biosignal data is extracted from raw, noisy signals?
-      Watch this quick demo and then try it yourself in the interactive game below!
-    </strong>
-    </p>
-    <video class="ppg-video" autoplay muted loop>
-      <source src="/assets/videos/ppg_cleaning.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-  <div class="instructions-container">
-    <p>Your goal is to clean the noisy PPG signal and match it as closely as possible to the clean reference signal. Aim for an <strong>RMSE (Root Mean Squared Error) below 0.12</strong> to win!</p>
-
-    <div class="interactive-container">
-      <iframe src="/assets/code/ppg_filter_interactive.html" class="interactive-frame" frameborder="0"></iframe>
-    </div>
-    <ul>
-      <li><strong>Highpass Filter:</strong> Removes low-frequency noise (e.g., baseline drift).</li>
-      <li><strong>Lowpass Filter:</strong> Removes high-frequency noise (e.g., motion artifacts).</li>
-      <li><strong>Rolling Mean Filter:</strong> Smooths short-term fluctuations.</li>
-    </ul>
-    <h3>How to Play:</h3>
-    <ol>
-      <li>Start with the noisy signal (gray) and observe how it differs from the clean signal (black).</li>
-      <li>Apply the filters one by one using the checkboxes.</li>
-      <li>Adjust the sliders to find the optimal cutoff frequencies and window size.</li>
-      <li>Watch the RMSE in the plot title - aim to reduce it below 0.12 to turn the filtered signal (blue) green.</li>
-      <li>Experiment and have fun! There are multiple ways to reach the target RMSE.</li>
-    </ol>
-    <p class="tips">💡 <strong>Tip:</strong> Small adjustments can make a big difference. Fine-tune your settings to achieve the best possible match.</p>
-    <p>Need help with biosignal processing? <a href="/contact">Let's connect</a>!</p>
-    <p>If you manage to get the RMSE below 0.12, take a screenshot of your filtered plot and <a href="mailto:jalpanchal1+ppg@gmail.com?subject=PPG Filtering Game Screenshot">send it to me!</a> I'd love to see your results.</p>
-  </div>
-  </div>
-</div>
-
 
 <style>
-.flex-container {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+body {
+  margin: 0;
+  padding: 0;
 }
-.photo-wrapper img {
-  max-width: 500px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 0; /* Remove padding below photo */
-}
-.welcome-text {
-  flex: 1;
-  color: white;
-  max-width: 700px;
-  padding: 0 40px;
-  text-align: left;
-}
-@media (max-width: 600px) {
-  .flex-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .photo-wrapper img {
-    max-width: 200px;
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.full-width-section {
+.full-width-container {
   width: 100vw;
+  /* overflow: hidden; */
+  white-space: nowrap;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 0rem 0;
-  background-color: #000000;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
 }
-.transition-section {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-bottom: 0;
-  border-top: 2px solid #4CAF50;
-  border-bottom: 2px solid #4CAF50;
+
+.image-scroller {
+  display: inline-flex;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+  padding: 0;
+  margin: 0;
 }
-.ppg-intro {
-  background-color: #f8f6f6;
-  text-align: center;
-  padding: 1rem 2rem;
-}
-.ppg-video {
-  width: 100%;
-  max-width: 900px;
+
+.image-scroller img {
+  width: 20vw;
+  max-width: 200px;
+  height: auto;
   border-radius: 15px;
-  border: 2px solid #060606;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-.white-section {
-  background-color: #ffffff;
-  color: #333;
-}
-.instructions-container {
-  background-color: #fbfbfb;
-  border: 2px solid #ddd;
-  border-radius: 12px;
-  padding: 20px 30px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.8s ease-in-out;
-  text-align: left;
 }
 
-.instructions-container h2 {
-  font-size: 1.8em;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.instructions-container ul, .instructions-container ol {
-  margin-left: 20px;
-  color: #555;
-  text-align: left;
-}
-
-.instructions-container li {
-  margin-bottom: 10px;
-}
-
-.instructions-container .tips {
-  font-style: italic;
-  color: #777;
-  margin-top: 15px;
-}
-
-.instructions-container a {
-  color: #4CAF50;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.instructions-container a:hover {
-  text-decoration: underline;
-}
-
-.interactive-container {
-  display: flex;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.interactive-frame {
-  width: 100%;
-  max-width: 1200px;
-  height: 400px;
-  border-radius: 12px;
-  border: 2px solid #ddd;
-}
-  
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 </style>
