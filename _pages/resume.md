@@ -19,7 +19,7 @@ h_max: 2
 
 ## Summary
 
-Experienced R&D Scientist with 5+ years in physiological signal processing, clinical validation and product development. Developed a novel stress metric within 6 months, offering innovative insights into user physiological states. Transformed research prototypes into a production-ready product within 2 years. Committed to creating meaningful health solutions through scientific innovation.
+Experienced R&D Scientist with 6+ years in physiological signal processing, clinical validation and product development. Developed a novel stress metric within 6 months, offering innovative insights into user physiological states. Transformed research prototypes into a production-ready product within 2 years. Committed to creating meaningful health solutions through scientific innovation.
 
 
 ## Professional Experience
@@ -214,6 +214,42 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
 </div>
 
 
+
+## Publications and Patents
+<!-- Resume Page Component -->
+<div class="education-section">
+  <button class="expand-toggle" onclick="toggleDetails('papers-details')">
+    <span>Publications</span>
+    <span class="toggle-icon">+</span>
+  </button>
+  <div id="papers-details" class="details hidden">
+    <p><strong><a href="https://scholar.google.com/citations?user=VUb6FrQAAAAJ&hl=en">Google Scholar Profile</a></strong></p>
+    <ul>
+      <li>Robert Ciesielski, Christine S. Wong, <b>Jal Panchal</b> et al. <b>Non-Invasive Blood Pressure Monitoring with In-ear Infrasonic Hemodynography for Preventative Cardiovascular Care</b>, 13 February 2025. <a href="https://doi.org/10.21203/rs.3.rs-5738134/v1">Preprint</a></li>
+      <li>Shen CP , <b>Panchal J</b>, Daniel M, Dimalanta C, Engstrom H, Ciesielski R, Barnacka A, Romero S, Bhavnani SP , Stinis CT . <b>A Novel Earbud Detects Aortic Stenosis Murmur Before and After Transcatheter Aortic Valve Replacement.</b> JACC Case Rep. 2023 Nov 2;28:102089. <a href="https://doi.org/10.1016/j.jaccas.2023.102089">Link</a></li>
+      <li><b>Panchal J</b>, Sowande OF , Prosser L, Johnson MJ. <b>Design of pediatric robot to simulate infant biomechanics for neuro-developmental assessment in a sensorized gym.</b> Proc IEEE RAS EMBS Int Conf Biomed Robot Biomechatron. 2022 Aug;2022:10.1109/biorob52689.2022.9925371 <a href="10.1109/biorob52689.2022.9925371">Link</a> | <a>Project Details</a></li>
+      <li>Gilliam FR 3rd, Ciesielski R, Shahinyan K, Shakya P , Cunsolo J, <b>Panchal JM</b>, Król-Józaga B, Król M, Kierul O, Bridges C, Shen C, Waldman CE, Ring M, Szepieniec T , Barnacka A, Bhavnani SP . <b>In-ear infrasonic hemodynography with a digital health device for  cardiovascular monitoring using the human audiome.</b> NP J Digit Med. 2022 Dec 22;5(1):189. <a href="https://www.nature.com/articles/s41746-022-00725-3">Link</a></li>
+      <li>Wheeler, C. M., Patel, S., Waldman, C. E., <b>Panchal, J.</b>, et al. <b>‘Hearing the Heart’: Validation of a novel digital health earbud technology to measure cardiac time intervals through infrasonic hemodynography.</b> Circulation 144, A11669 (2021). <a href="https://doi.org/10.1161/circ.144.suppl_1.11669">Link</a></li>
+      <li>Gilliam, F . R., Shahinyan, K., <b>Panchal, J.</b>, et al. B-AB24-01 MINDMICS: <b>In-ear infrasonic hemodynography for cardiac arrhythmia assessment beyond ECG.</b> Heart Rhythm 18, S46 (2021). <a href="https://www.heartrhythmjournal.com/article/S1547-5271(21)00671-8/fulltext">Link</a></li>
+    </ul>
+  </div>
+
+  <button class="expand-toggle" onclick="toggleDetails('patent-details')">
+    <span>Patents</span>
+    <span class="toggle-icon">+</span>
+  </button>
+  <div id="patent-details" class="details hidden">
+    <p><strong><a href="https://scholar.google.com/citations?user=VUb6FrQAAAAJ&hl=en">Google Scholar Profile</a></strong></p>
+    <ul>
+    <li>Barnacka, A., <b>Panchal, J. M.</b>, Ring, M. D., Devlin, T. <b>Earbud for detecting biosignals from and presenting audio signals at an inner ear canal and method therefor.</b> US20240348964A1(2024). <a href="https://patents.google.com/patent/US20240348964A1">Link</a></li>
+    <li>Barnacka, A., <b>Panchal, J. M.</b> <b>Synchronous clinical data collection, analysis and reporting system and method therefor.</b> US20230064524A1(2023) <a href="https://patents.google.com/patent/US20230064524A1">Link</a></li>
+    <li>Barnacka, A., <b>Panchal, J. M.</b>, Ciesielski, R. <b> Earbud-based auscultation system and method therefor.</b> US20230404518A1(2023) <a href="https://patents.google.com/patent/US20230404518A1/">Link</a></li>
+    <li>Barnacka, A., <b>Panchal, J. M.</b> <b>Closed-loop system using in-ear infrasonic hemodynography and method therefor. </b> US20230107691A1(2023) <a href="https://patents.google.com/patent/US20230107691A1">Link</a></li>
+    <li>Barnacka, A., <b>Panchal, J. M.</b>, Ring, M. D., Shakya, P <b>System and method for leak correction and normalization of in-ear pressure measurement for hemodynamic monitoring.</b> US20210401311A1(2021) <a href="https://patents.google.com/patent/US20210401311A1">Link</a></li>
+    </ul>
+    </div>
+  </div>
+
 <!-- Add this script to handle switching between companies and roles -->
 <script>
   function showExperience(companyId) {
@@ -366,7 +402,7 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
 }
 
 .expand-toggle:hover {
-  background-color:rgb(255, 255, 255);
+  background-color:rgb(244, 244, 244);
 }
 
 .details {
