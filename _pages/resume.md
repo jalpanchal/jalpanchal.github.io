@@ -1,12 +1,12 @@
 ---
-layout: splash
+layout: single
 title: "Resume"
 permalink: /resume/
 author_profile: false
-toc: true
+toc: false
 # toc_label: "Contents"
 # # toc_icon: "file-alt"
-toc_sticky: true
+# toc_sticky: true
 
 h_min: 1
 h_max: 2
