@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "About"
-layout: single
+layout: splash
 toc: false
 ---
 ## Short Summary
@@ -20,7 +20,7 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
   <div class="gallery-item w-1">
     <img src="/assets/images/jal_ecg_mm.jpg" alt="Gallery Image 3">
   </div>
-   <div class="gallery-item w-3">
+   <div class="gallery-item w-2">
     <video controls autoplay loop muted>
       <source src="/assets/videos/sim_openpose.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -120,7 +120,7 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
 
 .gallery-item.w-2 img,
 .gallery-item.w-2 video{
-    aspect-ratio: 8/3;
+    aspect-ratio: 8/2.95;
   object-fit: cover;
 }
 
