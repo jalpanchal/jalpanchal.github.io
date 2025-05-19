@@ -17,23 +17,29 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
   <div class="gallery-item w-1">
     <img src="/assets/images/jal.png" alt="Gallery Image 2">
   </div>
-  <div class="gallery-item w-1">
+  <div class="gallery-item w-2">
     <img src="/assets/images/jal.png" alt="Gallery Image 3">
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 4">
   </div>
   <div class="gallery-item w-2">
-    <video controls autoplay loop mute>
+    <video controls autoplay loop muted>
       <source src="/assets/videos/ppg_cleaning.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
-  <div class="gallery-item w-1">
-    <img src="/assets/images/jal.png" alt="Gallery Image 5">
+  <div class="gallery-item r-2">
+    <video controls autoplay loop muted>
+      <source src="/assets/videos/ces2025_pose.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 5">
+  </div>
+  <div class="gallery-item w-1">
+    <img src="/assets/images/jal.png" alt="Gallery Image 5">
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/jal.png" alt="Gallery Image 5">
@@ -68,6 +74,9 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
   gap: 0.5rem;
   max-width: 100%;
 }
+.gallery-item {
+  position: relative;
+}
 
 .gallery-item img, .gallery-item video {
   width: 100%;
@@ -87,7 +96,7 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
 }
 
 .gallery-item:hover img{
-  transform: scale(2.5);
+  transform: scale(2);
   z-index: 10;
   position: relative;
 }
@@ -107,6 +116,14 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
 
 .gallery-item.w-3 {
   grid-column: span 3;
+}
+
+.gallery-item.r-2 {
+  grid-row: span 2;
+}
+.gallery-item.rw-2 {
+  grid-row: span 2;
+  grid-column: span 2;
 }
 
 @media (max-width: 768px) {
