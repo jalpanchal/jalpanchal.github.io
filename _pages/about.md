@@ -15,13 +15,25 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
       <img src="/assets/images/iitm_friction_measurement_capston_setup.JPG" alt="Gallery Image 1">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/jal.png" alt="Gallery Image 2">
+    <img src="/assets/images/sim_cad.png" alt="Gallery Image 2">
   </div>
-  <div class="gallery-item w-2">
-    <img src="/assets/images/jal.png" alt="Gallery Image 3">
+  <div class="gallery-item w-1">
+    <img src="/assets/images/jal_ecg_mm.jpg" alt="Gallery Image 3">
+  </div>
+   <div class="gallery-item w-3">
+    <video controls autoplay loop muted>
+      <source src="/assets/videos/sim_openpose.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 4">
+  </div>
+  <div class="gallery-item w-1">
+    <img src="/assets/images/iitm_friction_measurement_timingbelt_setup2.JPG" alt="Gallery Image 4">
+  </div>
+  <div class="gallery-item r-2">
+    <img src="/assets/images/jal_soldering.jpg" alt="Gallery Image 4">
   </div>
   <div class="gallery-item w-2">
     <video controls autoplay loop muted>
@@ -38,32 +50,27 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
   <div class="gallery-item w-1">
     <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 5">
   </div>
-  <div class="gallery-item w-1">
-    <img src="/assets/images/jal.png" alt="Gallery Image 5">
+   <div class="gallery-item r-2">
+    <img src="/assets/images/jal_qualcomm_shenzhen.jpeg" alt="Gallery Image 5">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/jal.png" alt="Gallery Image 5">
+    <img src="/assets/images/jal_campfire.jpg" alt="Gallery Image 5">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/jal.png" alt="Gallery Image 5">
+    <img src="/assets/images/jal_cycle_nahant.jpeg" alt="Gallery Image 5">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/jal.png" alt="Gallery Image 5">
+    <img src="/assets/images/jal_mocktrial02_jan6.jpeg" alt="Gallery Image 5">
   </div>
-  <div class="gallery-item w-3">
-    <video controls autoplay loop mute autoplay loop mute>
-      <source src="/assets/videos/ppg_cleaning.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+ 
   <div class="gallery-item w-1">
     <img src="/assets/images/iitm_friction_measurement_capston_setup.JPG" alt="Gallery Image 5">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/jal.png" alt="Gallery Image 5">
+    <img src="/assets/images/jal_ces2025_booth.jpg" alt="Gallery Image 5">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/jal.png" alt="Gallery Image 5">
+    <img src="/assets/images/jal_cycle_repair_kitchen.jpeg" alt="Gallery Image 5">
   </div>
 </div>
 
@@ -85,11 +92,7 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
   display: block;
   pointer-events: auto; /* ensure image/video accepts pointer events */
 }
-.gallery-item img{
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
 
-}
 .gallery-item img,
 .gallery-item video {
   transition: transform 0.3s ease;
@@ -108,6 +111,24 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
 
 .gallery-item.w-1 {
   grid-column: span 1;
+}
+
+.gallery-item.w-1 img {
+    aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-item.w-2 img,
+.gallery-item.w-2 video{
+    aspect-ratio: 8/3;
+  object-fit: cover;
+}
+
+
+.gallery-item.r-2 img,
+.gallery-item.r-2 video{
+    aspect-ratio: 2/3.1;
+  object-fit: cover;
 }
 
 .gallery-item.w-2 {
