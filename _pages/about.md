@@ -4,33 +4,66 @@ title: "About"
 layout: single
 toc: false
 ---
-## Short Summary
 
-Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical systems and digital health. I love creating tech that directly improves people’s lives.
+Hi, I’m Jal — a research scientist and engineer passionate about building health technologies that connect physiology, data, and real-world impact.
 
+I work at the intersection of <b>sensing hardware</b>, <b>signal processing</b>, and <b>data science</b>. I develop algorithms that turn noisy biosignals into insights — from heart rate and blood pressure estimation to motion artifact removal and biofeedback. My work spans <b>machine learning</b>, <b>deep learning</b>, and <b>statistical modeling</b>, and I’ve led cross-functional teams from concept to prototype and clinical validation.
+
+What drives me is the potential of technology to improve lives — creating solutions that are effective, trustworthy, and human-centered.
+
+I’m curious about how complex systems work, whether it’s the human body or an embedded device. I thrive in collaborative environments where we ask bold questions and build with care.
+
+Outside of work, I enjoy cycling, swimming, and pickleball — anything active and mentally engaging. I’m also fascinated by the connection between the heart and brain, and love deep conversations about science and philosophy.
+
+Let's connect:
+<div class="about-me-links">
+      <a href="https://calendly.com/jalpanchal1" class="tag">Schedule a Call</a>
+      <a href="mailto:jalpanchal1+contact@gmail.com?subject=Hello!" class="tag">Email Me</a>
+      <a href="https://www.linkedin.com/in/jalpanchal/" class="tag">Linked In</a>
+      <a href="https://scholar.google.com/citations?user=VUb6FrQAAAAJ&hl=en" class="tag">Google Scholar</a>
+</div>
 ---
+
 
 <div class="gallery-container">
   <div class="gallery-item w-1">
       <img src="/assets/images/iitm_friction_measurement_capston_setup.JPG" alt="Gallery Image 1">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/sim_cad.png" alt="Gallery Image 2">
+    <img src="/assets/images/infantsim_cad.png" alt="Gallery Image 2">
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/jal_ecg_mm.jpg" alt="Gallery Image 3">
   </div>
-   <div class="gallery-item w-2">
+  <div class="gallery-item w-1">
+    <img src="/assets/images/cis541_pacemaker_circuit .jpg" alt="Gallery Image 3">
+  </div>
+   <div class="gallery-item w-3">
     <video controls autoplay loop muted>
-      <source src="/assets/videos/sim_openpose.mp4" type="video/mp4">
+      <source src="/assets/videos/infantsim_openpose.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+  </div>
+  <div class="gallery-item w-1">
+      <img src="/assets/images/iitk_helmholtzresonator_cad.PNG" alt="Gallery Image 1">
+  </div>
+  <div class="gallery-item w-1">
+    <img src="/assets/images/iitk_helmholtzresonator_comsol.PNG" alt="Gallery Image 2">
+  </div>
+  <div class="gallery-item w-1">
+    <img src="/assets/images/iitk_helmholtzresonator.jpg" alt="Gallery Image 3">
+  </div>
+  <div class="gallery-item w-1">
+    <img src="/assets/images/iitk_jal_helmholtsresonator_exp.JPG" alt="Gallery Image 3">
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 4">
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/iitm_friction_measurement_timingbelt_setup2.JPG" alt="Gallery Image 4">
+  </div>
+  <div class="gallery-item rw-2">
+    <img src="/assets/images/jal_cycle_atlanticcity.jpeg" alt="Gallery Image 4">
   </div>
   <div class="gallery-item r-2">
     <img src="/assets/images/jal_soldering.jpg" alt="Gallery Image 4">
@@ -47,6 +80,16 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
       Your browser does not support the video tag.
     </video>
   </div>
+  <div class="gallery-item w-2">
+    <img src="/assets/images/ jal_frinds_kayak.jpg" alt="Gallery Image 5">
+  </div>
+  <div class="gallery-item rw-2">
+    <video controls autoplay loop muted>
+      <source src="/assets/videos/infantsim_rhanimation.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
   <div class="gallery-item w-1">
     <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 5">
   </div>
@@ -62,21 +105,32 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
   <div class="gallery-item w-1">
     <img src="/assets/images/jal_mocktrial02_jan6.jpeg" alt="Gallery Image 5">
   </div>
+  <div class="gallery-item w-2">
+    <video controls autoplay loop muted>
+      <source src="/assets/videos/iitk_phmr_labview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
  
   <div class="gallery-item w-1">
-    <img src="/assets/images/iitm_friction_measurement_capston_setup.JPG" alt="Gallery Image 5">
+    <img src="/assets/images/jal_cycle_fix.jpeg" alt="Gallery Image 5">
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/jal_ces2025_booth.jpg" alt="Gallery Image 5">
   </div>
+  <div class="gallery-item w-3">
+    <video controls autoplay loop muted>
+      <source src="/assets/videos/modelicon_bmsce_lego_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
   <div class="gallery-item w-1">
     <img src="/assets/images/jal_cycle_repair_kitchen.jpeg" alt="Gallery Image 5">
   </div>
 </div>
 
-##
-
-##
+---
 
 
 <style>
@@ -205,6 +259,43 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
 
   .gallery-item.w-3 {
     grid-column: span 2;
+  }
+}
+
+.about-me-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  z-index: 2;
+  opacity: 1;
+  
+  .tag {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0.2em 0.8em;
+    border-radius: 7px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 1px solid #d2dbe1;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #6a6b6d;
+      border-color: #bbc4cb;
+      color : #ffffff;
+      text-decoration: none;
+    }
+
+    &.active {
+      background-color: #444;
+      color: #ffffff;
+      border-color: #444;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
