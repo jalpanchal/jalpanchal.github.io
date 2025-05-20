@@ -9,3 +9,7 @@ search: false
 @import "minimal-mistakes"; // main partials
 
 @import "minimal-mistakes/_custom_cards"; // custom cards
+
+.mfp-hide {
+  display: none !important;
+}
