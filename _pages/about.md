@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "About"
-layout: splash
+layout: single
 toc: false
 ---
 ## Short Summary
@@ -74,6 +74,11 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
   </div>
 </div>
 
+##
+
+##
+
+
 <style>
 .gallery-container {
   display: grid;
@@ -83,6 +88,7 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
 }
 .gallery-item {
   position: relative;
+  overflow: visible;
 }
 
 .gallery-item img, .gallery-item video {
@@ -95,18 +101,37 @@ Hi! I’m Jal, a passionate researcher and engineer specializing in biomedical s
 
 .gallery-item img,
 .gallery-item video {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .gallery-item:hover img{
-  transform: scale(2);
-  z-index: 10;
-  position: relative;
+  cursor: zoom-in;
+  aspect-ratio: auto  !important;
+  position: absolute  !important;
+  width: auto  !important;
+  height: auto  !important;
+  max-width: 500px  !important;
+  max-height: none  !important;
+  object-fit: contain  !important;
+  transform: scale(1.5);
+  z-index: 100;
+  background: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
 }
 .gallery-item:hover video {
+  ursor: zoom-in;
+  aspect-ratio: auto  !important;
+  position: absolute  !important;
+  width: auto  !important;
+  height: auto  !important;
+  max-width: 500px  !important;
+  max-height: none  !important;
+  object-fit: contain  !important;
   transform: scale(1.5);
-  z-index: 10;
-  position: relative;
+  z-index: 100;
+  background: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-item.w-1 {
