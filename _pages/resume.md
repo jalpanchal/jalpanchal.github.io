@@ -52,8 +52,8 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
   </div>
 
   <div class="experience-details">
-    <div id="experience-1-1" class="experience-item active">
-      <h2>Senior R&D Scientist</h2>
+  <div id="experience-1-1" class="experience-item active">
+    <h2>Senior R&D Scientist</h2>
       <p>JUN 2022 - Present | Boston, MA</p>
       <ul>
         <li><b>Algorithm Development and Implementation:</b> Led the development of a personalized stress metric, from hypothesis to product launch in 6 months, by managing studies and cross-functional integration.</li>
@@ -62,12 +62,14 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
         <li><b>Blood Pressure Prediction:</b> Developed advanced signal processing and feature engineering techniques to train machine learning models for blood pressure estimation from in-ear signals, reducing prediction error by over 20%.</li>
       </ul>
       <div class="card-tags">
-        <a class="tag">Project Management</a>
-        <a class="tag">Clinical Study</a>
+        <a class="tag">Agile Project Management</a>
+        <a class="tag">Clinical Study Design</a>
         <a class="tag">Algorithm Development</a>
         <a class="tag">Machine Learning</a>
+        <a class="tag">Deep Learning</a>
+        <a class="tag">PyTorch</a>
       </div>
-    </div>
+  </div>
     <div id="experience-1-2" class="experience-item">
       <h2>Clinical Trials Coordinator</h2>
       <p>AUG 2020 - AUG 2021 | Boston, MA</p>
@@ -77,7 +79,8 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
       </ul>
       <div class="card-tags">
         <a class="tag">Project Management</a>
-        <a class="tag">Clinical Study</a>
+        <a class="tag">Clinical Study Design</a>
+        <a class="tag">Human Subject Research</a>
       </div>
     </div>
     <div id="experience-1-3" class="experience-item">
@@ -314,6 +317,8 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
         <a class="tag">Verification and Validation</a>
         <a class="tag">Prototyping</a>
         <a class="tag">Data Vizualization</a>
+        <a class="tag">Instrumentation</a>
+        <a class="tag">Sensor Characterisation</a>
       </div>
     </div>
     <div id="skills-4" class="experience-item">

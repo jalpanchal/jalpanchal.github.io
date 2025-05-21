@@ -1,0 +1,17 @@
+<div id="{{ include.role_id }}" class="experience-item {% if include.active %}active{% endif %}">
+  {% assign matched_experience = site.experiences | where: "role_id", include.role_id | first %}
+  {% if matched_experience %}
+    <h2>{{ matched_experience.title }}</h2>
+    <p>{{ matched_experience.date }} | {{ matched_experience.location }}</p>
+    {{ matched_experience.content }}
+    {% if matched_experience.tags %}
+      <div class="card-tags">
+        {% for tag in matched_experience.tags %}
+          <a class="tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% else %}
+    <p>No experience found for teste ID {{ include.role_id }}</p>
+  {% endif %}
+</div>
