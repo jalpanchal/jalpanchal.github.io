@@ -12,155 +12,85 @@ tags:
 header:
   image: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
   teaser: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
-# toc: true
+toc: false
 # toc_sticky: true
 ---
 
-## Project Overview
+<h1>Heart, Brain, and Behavior: What Wearables and Network Neuroscience Reveal About Seizures</h1>
+Insights from my master's thesis on network neuroscience and wearable data to study seizure prediction and behavioral state monitoring.
+## 🧠 Part I: Using Network Neuroscience to Uncover the Link Between Heart and Brain Before a Seizure
 
-During my Summer Fellowship at the Neuromechanics Lab, Department of Applied Mechanics, IIT Madras, I designed and developed a tribometer setup to study the frictional properties between human fingers and various surface materials. This project combined mechanical design, instrumentation, electronics, and software integration to create a functional system for analyzing skin-material friction coefficients.
+Seizures are often unpredictable and can be triggered by subtle physiological and psychological changes. In my master’s thesis, I explored how **heart rate variability (HRV)** — a marker of autonomic nervous system (ANS) activity — might correlate with changes in **brain network connectivity** before a seizure.
 
-## The Challenge
+### 📊 What I Did
 
-The human hand is remarkably complex in its interactions with surfaces. While Amonton's laws of friction provide a general framework for understanding friction between solid surfaces, the unique properties of human skin create interesting variations that aren't fully explained by classical friction models. 
+- Used **intracranial EEG and ECG** from 12 epilepsy patients.
+- Built **functional brain networks** from EEG using 1-minute windows.
+- Grouped electrodes (nodes) based on their **community flexibility** over time.
+- Calculated HRV metrics from ECG: **RMSSD**, **LF/HF ratio**, **SD1/SD2**.
+- Measured correlation between HRV patterns and network properties like **node strength** and **global efficiency**.
 
-Our objective was to create an instrument that could:
-- Measure the coefficient of friction between finger digits and various test surfaces
-- Analyze variations in friction with different applied forces
-- Compare experimental results with theoretical friction models
-- Generate reliable, repeatable measurements for scientific study
+### 🔍 What I Found
 
-## Technical Background
+- A subset of **low-flexibility nodes** in the brain showed **stronger correlation** with HRV than the full network.
+- **Heart rate (HR)** had the highest correlation, followed by LF/HF and SD1/SD2.
+- These findings hint at a **stable sub-network** in the brain that reflects behavioral state changes — and may be important for seizure prediction.
 
-Before diving into the design, I studied the fundamentals of friction mechanics and previous research in the field:
+### 🧠 Why This Matters
 
-### Friction Fundamentals
-- **Dry friction** resistance between two solid surfaces in contact
-- **Static friction** (μs) between non-moving surfaces
-- **Kinetic friction** (μk) between moving surfaces in relative motion
+By combining **temporal network analysis** and HRV, we can start to uncover patterns that may serve as **biomarkers for stress, fatigue, or pre-seizure states**. This could eventually enable real-time feedback for patients using wearable devices or implants.
 
-The classical Amonton's laws state:
-- Friction force is directly proportional to applied load
-- Friction force is independent of apparent contact area
-- Kinetic friction is independent of sliding velocity
+---
 
-The mathematical model for friction follows Coulomb's equation:
-```
-Ff = μ × Fn
-```
-Where:
-- Ff is the friction force
-- μ is the coefficient of friction 
-- Fn is the normal force
+## ⌚ Part II: Evaluating Wearables for Behavioral State Monitoring in Epilepsy
 
-## Design Methodology
+As part of my thesis, I also ran a **clinical trial** to test how well consumer wearables like the **Apple Watch Series 7** and **Fitbit Sense** could monitor heart rate and behavioral states around seizures.
 
-I followed an iterative design process, developing two prototypes (Alpha and Beta) with improvements based on testing and performance evaluation:
+### 📋 Study Setup
 
-### Design Requirements
-1. Measure vertical force (Fv) and horizontal force (Fh) at the finger-surface interface
-2. Create controlled slip between finger and test surface
-3. Record force data for friction coefficient calculation
-4. Allow testing of multiple surface materials
-5. Provide consistent, repeatable measurements
+- Recruited **7 patients** in the Epilepsy Monitoring Unit (EMU).
+- Devices used: **Fitbit Sense** and **Apple Watch Series 7**.
+- Collected:
+  - ECG, EEG, and seizure annotations
+  - HR, sleep, and motion data from wearables
+  - Patient-reported mood via surveys
 
-## Tribometer Setup Alpha
+### 🔍 Findings
 
-The first prototype used a linear guide mechanism inspired by printer cartridge movement:
+#### ✅ Accuracy
 
-![Tribometer Setup Alpha](/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG)
+- **Apple Watch HR** closely matched ECG (r = 0.87).
+- **Fitbit** had higher sampling rates but less agreement with ECG.
+- **HRV metrics** (RMSSD, HF power) showed **poor agreement** — likely due to low sampling rate.
 
-### Key Components
-- **Base**: 10mm wood sheet for stability and workability
-- **Linear Motion System**: Precision linear guide rail with ball bearing slide block
-- **Actuation**: DC geared motor (12V, 45kg-cm torque) 
-- **Motion Transfer**: Timing pulley and belt system (2mm pitch)
-- **Sensing**: ATI multi-dimensional force sensor
-- **Control**: Arduino Uno microcontroller with LabVIEW integration
-- **Power**: 12V DC power supply
+#### ⚡ Practical Challenges
 
-### Working Principle
-The test surface attached to the force sensor moves horizontally while the subject places their finger on the surface with controlled vertical force. As the motor rotates, the timing belt drives the linear slide, creating relative motion between the finger and test surface. The force sensor continuously measures both vertical force (Fv) and horizontal friction force (Fh), allowing calculation of the coefficient of friction (μ = Fh/Fv).
+- Apple Watch needed **2x/day charging**; Fitbit lasted longer.
+- Accelerometry required 3rd-party apps (e.g., SensorLog).
+- We proposed using **hot-swapping two Apple Watches** to avoid data loss during charging.
 
-### Technical Challenges
-During testing of Setup Alpha, I identified two main issues:
-1. High friction in the linear motion system
-2. Difficulty maintaining consistent tension in the timing belt
+### 🚦 Behavioral States Around Seizures
 
-## Tribometer Setup Beta
+- Calculated **z-scores** of RMSSD and HF power around seizures.
+- Found that **RMSSD often dropped before a seizure**, possibly reflecting fatigue or stress.
+- Recovery patterns were visible in the **post-seizure rise** in HRV.
 
-To address these challenges, I designed Setup Beta using a capstan-bowstring mechanism:
+---
 
-![Tribometer Setup Beta](/assets/images/iitm_friction_measurement_capston_setup.JPG)
+## 🧭 Looking Ahead
 
-### Design Improvements
-- **Capstan Drive**: Replaced timing belt with a stainless steel cable (1.2mm diameter) wrapped around a custom-designed capstan
-- **Tension Control**: Added spring mechanism to maintain consistent cable tension
-- **Movable Base**: Redesigned component to connect the cable to the slide block
-- **Reduced Friction**: Modified system reduced mechanical resistance in the linear motion
+This work was a **first step** in integrating wearable sensing and network neuroscience for seizure monitoring. Future directions include:
 
-### Technical Details
-- **Motor**: Same 60rpm, 45kg-cm torque DC geared motor
-- **Capstan**: Custom designed with 20mm diameter, V-thread groove (1.5mm pitch)
-- **Linear Speed**: Approximately 6 cm/s
-- **Spring Constant**: ~2 kg/cm for maintaining cable tension
-- **Control System**: Same Arduino + LabVIEW integration for precise motor control and data acquisition
+- Larger datasets to validate patterns
+- Long-term at-home monitoring
+- Real-time feedback systems for patients
 
-## Software Integration
+---
 
-The control and data acquisition system combined Arduino for low-level motor control with LabVIEW for the user interface and data processing:
+## 🎓 Learn More
 
-### Arduino Development
-I wrote several iterations of Arduino code to control motor direction and speed, including:
-- Basic ON/OFF control
-- Direction control with switch input
-- Speed control using potentiometer input
-- Integrated control through LabVIEW communication
+- 📘 [Full thesis PDF](/assets/pdfs/jalp_thesis_submission.pdf)
+- 🎥 [Watch my presentation on YouTube](https://youtu.be/yAQRYOV1Jx0?si=3D1k1p1ZrPA6EA9D)
 
-### LabVIEW Interface
-The LabVIEW virtual instruments (VIs) provided:
-- Real-time force data visualization
-- Motor speed and direction control
-- Data recording and export capabilities
-- Integrated experimental workflow
+Thanks for reading! If you're interested in wearable-based health monitoring, epilepsy research, or signal processing — feel free to reach out or browse my other posts.
 
-
-
-## Results and Analysis
-
-With the tribometer setup, we could analyze:
-
-1. Static coefficient of friction between finger digits and various materials
-2. Changes in friction with varying normal force
-3. Differences between static and kinetic friction coefficients
-4. Verification of Amonton's laws for skin-surface interfaces
-
-By plotting Fh against Fv at the moment of slip, we could determine the coefficient of friction as the slope of the resulting curve.
-
-## Skills Applied
-
-This project allowed me to apply and develop several technical skills:
-
-- **Mechanical Design**: Creating custom mechanisms and selecting appropriate components
-- **CAD Modeling**: Designing custom parts for the experimental setup
-- **Electronics**: Motor driver circuit design and sensor integration
-- **Programming**: Arduino coding and LabVIEW development
-- **Data Analysis**: Processing force sensor data to calculate friction coefficients
-- **Problem Solving**: Identifying issues in the first prototype and developing improvements
-- **Research Application**: Implementing theoretical concepts in a practical measurement system
-
-## Future Improvements
-
-Based on my experience with both prototypes, I identified several potential improvements:
-
-1. Using a motor with optical feedback for more precise position control
-2. Implementing a dedicated battery power supply for portability
-3. Testing different cable materials and diameters for the bowstring mechanism
-4. Redesigning the movable base for better ergonomics and reduced interference
-5. Adding automatic test sequencing for improved experimental reproducibility
-
-## Conclusion
-
-This tribometer project successfully combined principles of mechanical design, electronics, and software integration to create a functional scientific instrument. The iterative design process allowed me to identify and solve technical challenges, resulting in a system capable of measuring and analyzing the complex frictional properties between human skin and various materials.
-
-The experience gained in this project has strengthened my skills in mechatronics system design, instrumentation, and experimental methodology—all valuable capabilities for future engineering challenges.

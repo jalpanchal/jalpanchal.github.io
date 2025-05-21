@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-title: "About"
+title: "About Me"
 layout: single
 toc: false
 ---
@@ -36,7 +36,7 @@ Let's connect:
     <img src="/assets/images/jal_ecg_mm.jpg" alt="Gallery Image 3">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/cis541_pacemaker_circuit .jpg" alt="Gallery Image 3">
+    <img src="/assets/images/cis541_pacemaker_circuit.jpg" alt="Gallery Image 3">
   </div>
    <div class="gallery-item w-3">
     <video controls autoplay loop muted>
@@ -51,7 +51,7 @@ Let's connect:
     <img src="/assets/images/iitk_helmholtzresonator_comsol.PNG" alt="Gallery Image 2">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/iitk_helmholtzresonator.jpg" alt="Gallery Image 3">
+    <img src="/assets/images/iitk_helmholtzresonator.JPG" alt="Gallery Image 3">
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/iitk_jal_helmholtsresonator_exp.JPG" alt="Gallery Image 3">
