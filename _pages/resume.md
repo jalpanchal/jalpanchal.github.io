@@ -257,7 +257,89 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
 
 
 ## Skills and Tools
+<div class="experience-container" id="skills-container">
+  <div class="company-list">
+    <ul>
+      <li id="skill-tab-1" class="company-item active" onclick="showSkills(1)">Sensor Technologies</li>
+      <li id="skill-tab-2" class="company-item" onclick="showSkills(2)">Software & Tools</li>
+      <li id="skill-tab-3" class="company-item" onclick="showSkills(3)">Technical Skills</li>
+      <li id="skill-tab-4" class="company-item" onclick="showSkills(4)">Research and Clinical Expertise</li>
+      <li id="skill-tab-5" class="company-item" onclick="showSkills(5)">Project Management</li>
+    </ul>
+  </div>
 
+  <div class="experience-details">
+    <div id="skills-1" class="experience-item active">
+      <div class="section-tags">
+        <a class="tag">Electrocardiograph (ECG)</a>
+        <a class="tag">Electroencephalograph (EEG)</a>
+        <a class="tag">Photopletysmograph (PPG)</a>
+        <a class="tag">Acoustic Sensing</a>
+        <a class="tag">Pressure Sensing</a>
+        <a class="tag">Temperature Sensing</a>
+        <a class="tag">Motion Sensing</a>
+      </div>
+    </div>
+    <div id="skills-2" class="experience-item">
+      <div class="section-tags">
+        <a class="tag">Python</a>
+        <a class="tag">Scikit-learn</a>
+        <a class="tag">PyTorch</a>
+        <a class="tag">Transformers</a>
+        <a class="tag">Bokeh</a>
+        <a class="tag">MATLAB</a>
+        <a class="tag">SQL</a>
+        <a class="tag">InfluxDB</a>
+        <a class="tag">Embedded C</a>
+        <a class="tag">SolidWorks</a>
+        <a class="tag">LabVIEW</a>
+        <a class="tag">GIT</a>
+      </div>
+    </div>
+    <div id="skills-3" class="experience-item">
+      <div class="section-tags">
+        <a class="tag">Biomedical Signal Processing</a>
+        <a class="tag">Biophysics</a>
+        <a class="tag">Image Processing</a>
+        <a class="tag">Time Series Analysis</a>
+        <a class="tag">Signal Filtering</a>
+        <a class="tag">Multi-variate Analysis</a>
+        <a class="tag">Feature Engineering</a>
+        <a class="tag">Machine Learning</a>
+        <a class="tag">Deep Learning</a>
+        <a class="tag">Transformer Based Models</a>
+        <a class="tag">LLMs</a>
+        <a class="tag">Algorithm Development</a>
+        <a class="tag">Testing</a>
+        <a class="tag">Verification and Validation</a>
+        <a class="tag">Prototyping</a>
+        <a class="tag">Data Vizualization</a>
+      </div>
+    </div>
+    <div id="skills-4" class="experience-item">
+      <div class="section-tags">
+        <a class="tag">Statistical Analysis</a>
+        <a class="tag">Monte-Carlo Simulations</a>
+        <a class="tag">Mathematical Modeling</a>
+        <a class="tag">Exploratory Data Analysis</a>
+        <a class="tag">First Principles Thinking</a>
+        <a class="tag">Root Cause Analysis</a>
+        <a class="tag">Human Subject Research</a>
+        <a class="tag">Clinical Study Design</a>
+        <a class="tag">Design of Experiments</a>
+      </div>
+    </div>
+    <div id="skills-5" class="experience-item">
+      <div class="section-tags">
+        <a class="tag">Agile Project Management</a>
+        <a class="tag">User Testing</a>
+        <a class="tag">Cross-functional Tema Leadership</a>
+        <a class="tag">Product Development</a>
+        <a class="tag">Stakeholder mapping</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -326,6 +408,24 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
     icon.textContent = "+";
   }
 }
+
+  function showSkills(index) {
+    // Hide all skill sections
+    const skillSections = document.querySelectorAll('#skills-container .experience-item');
+    skillSections.forEach(section => section.classList.remove('active'));
+
+    // Remove active state from all tabs
+    const skillTabs = document.querySelectorAll('#skills-container .company-item');
+    skillTabs.forEach(tab => tab.classList.remove('active'));
+
+    // Activate selected tab and corresponding section
+    document.getElementById(`skill-tab-${index}`).classList.add('active');
+    document.getElementById(`skills-${index}`).classList.add('active');
+  }
+
+    window.onload = () => {
+    showSkills(1);
+  };
 </script>
  
 <!-- Styles for the component -->
@@ -459,6 +559,95 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
       border-color: #444;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
+  }
+}
+
+.skills-container {
+  display: flex;
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.skills-tab-list {
+  width: 25%;
+}
+
+.skills-tab-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-tab-item {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f7f7f7;
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.skills-tab-item:hover {
+  background-color: #eaeaea;
+}
+
+.skills-tab-item.active {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  border-left: 4px solid #2a7ae2;
+}
+
+.skills-details {
+  width: 75%;
+  padding-left: 2rem;
+}
+
+.skills-content {
+  display: none;
+}
+
+.skills-content.active {
+  display: block;
+}
+
+.section-tags {
+  display:flex;
+  flex-wrap: wrap;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
+  /* gap: 8px 12px; */
+  gap: 10px;
+  margin-top: 1rem;
+  justify-content: center;
+  z-index: 2;
+  opacity: 1;
+  
+  .tag {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0.2em 0.8em;
+    border-radius: 7px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 1px solid #d2dbe1;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+
+    /* &:hover {
+      background-color: #6a6b6d;
+      border-color: #bbc4cb;
+      color : #ffffff;
+      text-decoration: none;
+    }
+
+    &.active {
+      background-color: #444;
+      color: #ffffff;
+      border-color: #444;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    } */
   }
 }
 </style>
