@@ -71,18 +71,29 @@ The selected devices offered various features for continuous monitoring:
 **Evaluating Wearable Accuracy**
 We compared the heart rate and HRV measurements from the wearables against the ECG gold standard.
 
+
+<!-- <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+  <figure class="m-figure center" style="flex: 1 1 45%;">
+    <img src="/assets/images/projects/upenn_thesis_ecg_processing1.png" alt="ECG signal processing" />
+    <figcaption>ECG signal processing</figcaption>
+  </figure>
+  <figure class="m-figure center" style="flex: 1 1 45%;">
+    <img src="/assets/images/projects/upenn_thesis_ecg_processing2.png" alt="ECG signal processing and HRV computation" />
+    <figcaption>ECG signal processing and HRV computation</figcaption>
+  </figure>
+</div> -->
+
 <figure class="m-figure center">
-  <img src="/assets/images/projects/upenn_thesis_ecg_processing1.png" alt="ECG signal processing" />
+  <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    <img src="/assets/images/projects/upenn_thesis_ecg_processing1.png" alt="ECG signal processing" style="max-width: 45%;"/>
+    <img src="/assets/images/projects/upenn_thesis_ecg_processing2.png" alt="ECG signal processing and HRV computation" style="max-width: 45%;"/>
+  </div>
   <figcaption>ECG signal processing</figcaption>
-</figure>
+  </figure>
+
 
 * **Heart Rate (HR):** We observed a good agreement in heart rate values between the wearable devices and ECG, with an overall Pearson correlation of r=0.87. Specifically, Apple Watch measurements showed higher accuracy and better agreement with ECG-based HR compared to Fitbit.
 * **Heart Rate Variability (HRV):** For HRV parameters like RMSSD and HF power, the agreement was notably lower, with overall correlations of r=0.14 for RMSSD and r=0.1 for HF power. This could be attributed to the sparse sampling rate of HR data by the wearables, which might not capture the subtle variations needed for accurate HRV calculations.
-
-<figure class="m-figure center">
-  <img src="/assets/images/projects/upenn_thesis_ecg_processing2.png" alt="ECG signal processing and HRV computation" />
-  <figcaption>ECG signal processing and HRV computation</figcaption>
-</figure>
 
 **Identifying Behavioral States Around Seizures**
 Despite the limitations in HRV accuracy, we explored a method to identify behavioral states around a seizure using hourly average values of RMSSD and HF values from non-seizure days as a baseline. From an initial analysis of 9 seizures across 3 subjects, we observed a promising trend: the RMSSD state decreased from a higher state to a lower state before a seizure started. This observation aligns with similar findings in athletes, where a drop in RMSSD can indicate fatigue. This suggests a potential for identifying stress or fatigue as a precursor to seizures, offering valuable insights for patients.
@@ -99,11 +110,11 @@ This thesis represents a crucial first step in understanding the complex interpl
 ## Research Lab and Principal Investigator
 
 - **Lab Name:** <a href="https://littlab.seas.upenn.edu">Litt Lab</a>, <a href="https://cnt.upenn.edu/">Center for Neuroengineering and Therapeutics (CNT)</a>
-- **Principal Investigator:** Dr. Brian Litt
+- **Principal Investigator:** Dr. Brian Litt, Dr. Michelle Johnson
 - **Institution:** University of Pennsylvania
 
 
-**Learn More:**
+## Learn More:
 
 <div class="download-button download-button--left"><a href="/assets/files/JalPanchal_MastersThesis.pdf" class="tag">Download Master's Thesis PDF</a></div>
 

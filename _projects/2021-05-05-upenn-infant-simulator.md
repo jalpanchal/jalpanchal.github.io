@@ -1,167 +1,64 @@
 ---
-title: "UPenn - Infant Simulator"
+title: "Robotics for Early Neuromotor Assessment"
 categories:
   - Projects
 tags:
-  - Prototyping
-  - CAD
-  - Python
+  - Robotics
+  - Computer Vision
   - Keras
+  - Python
 # author_profile: false
 # layout: archive
 header:
   image: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
   teaser: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
-# toc: true
+toc: false
 # toc_sticky: true
 featured : true
+expet: "Exploring the development of a robotic infant simulator for quantitative assessment of neuromotor development, integrating mechanical design, kinematics, and computer vision."
 ---
 
-## Project Overview
+## Building a Robotic Infant: Advancing Early Neuromotor Assessment
+During my independent study at the University of Pennsylvania, I had the incredible opportunity to design and build a robotic infant simulator. This project was a crucial step towards creating accessible and quantitative tools for the early diagnosis of developmental disorders like Cerebral Palsy (CP), blending my expertise in robotics, computer vision, and biomechanics.
 
-During my Summer Fellowship at the Neuromechanics Lab, Department of Applied Mechanics, IIT Madras, I designed and developed a tribometer setup to study the frictional properties between human fingers and various surface materials. This project combined mechanical design, instrumentation, electronics, and software integration to create a functional system for analyzing skin-material friction coefficients.
+## The Clinical Need: Quantitative Assessment for Developmental Delays
+Developmental disorders are a major cause of childhood disability. Early diagnosis and intervention are key to improving patient quality of life. Current neuromotor assessment often relies on subjective expert evaluations, which can be limited in accessibility and consistency. Our goal was to develop a system that could accurately measure infant movements and their corresponding Center of Pressure (COP) changes – a vital biomarker for postural control and potential neuromotor delays. The challenge? Obtaining consistent, repeatable movements from human infants for systematic research is exceptionally difficult.
 
-## The Challenge
+## My Solution: A 4-DOF Robotic Infant Simulator
+To overcome this, I engineered a novel 4-Degree of Freedom (DOF) pediatric robot simulator. This robot is capable of mimicking simple arm and leg movements of an infant lying supine, providing a controlled and repeatable platform to investigate how variations in body size, weight, and limb movements affect COP. This simulator seamlessly integrates with the existing PANDA (Play And Neuro-Development Assessment) Gym system at the Rehabilitation Robotics Lab at UPenn.
 
-The human hand is remarkably complex in its interactions with surfaces. While Amonton's laws of friction provide a general framework for understanding friction between solid surfaces, the unique properties of human skin create interesting variations that aren't fully explained by classical friction models. 
+## Technical Deep Dive: My Capabilities in Action
+This project was a comprehensive exercise in robotic system development, demonstrating several key technical proficiencies:
 
-Our objective was to create an instrument that could:
-- Measure the coefficient of friction between finger digits and various test surfaces
-- Analyze variations in friction with different applied forces
-- Compare experimental results with theoretical friction models
-- Generate reliable, repeatable measurements for scientific study
+## Mechanical Design & Fabrication
+- Realistic Foundation: I selected a 559 mm (22-inch) silicone infant simulator as the base, prioritizing its realistic size and appearance for meaningful simulation.
+- Precision Actuation: Each limb was actuated with 1-DOF using Dynamixel XC430-W240-T servo motors. Their 1.9 Nm stall torque, metal gears, and precise control were critical for accurately simulating infant limb accelerations.
+- Custom Structure: I designed and 3D-printed a custom PLA plastic torso to house the electronics, provide a stable motor mount, and ensure limbs moved along defined planes. Hip angles were fixed at 60° for leg movements, and arm movements were parallel to the sagittal plane.
+- Biomechanical Fidelity: To represent infants of different ages (0-6 months), the simulator's total weight could be adjusted from 1.9 kg to 8 kg by filling the hollow limbs with sand and adding mass to the head and torso. This meticulous attention to detail was vital for replicating infant biomechanics.
 
-## Technical Background
+## Kinematics and Modeling
+- Forward Kinematics (FK) Model: I developed a robust FK model for each limb using the Denavit-Hartenberg (DH) convention. This allowed for precise calculation of joint locations and accurate prediction of the Center of Mass (COM) for various limb angles, providing essential ground truth data for simulator movements.
+- Coordinate Transformations: Complex transformations were implemented to seamlessly shift joint references from individual limb frames to the simulator's frame, and subsequently to the PANDA Gym's mat frame, ensuring accurate spatial mapping and integration.
 
-Before diving into the design, I studied the fundamentals of friction mechanics and previous research in the field:
+## Sensor Integration and Data Acquisition
+- PANDA Gym Integration: The simulator was integrated with the PANDA Gym, which features a 610x610 mm pressure-sensitive mat equipped with four load cells for 60 Hz COP measurement.
+Visual Data Capture: A GoPro Hero 4 Session camera captured video at 1080p, 30 fps, providing crucial visual data for subsequent computer vision analysis.
+- Synchronized Data Streams: Data from motor joint positions (12.5 Hz), camera video, and pressure mat COP were carefully synchronized and recorded, enabling comprehensive, multi-modal analysis.
 
-### Friction Fundamentals
-- **Dry friction** resistance between two solid surfaces in contact
-- **Static friction** (μs) between non-moving surfaces
-- **Kinetic friction** (μk) between moving surfaces in relative motion
+## Computer Vision and Data Analysis
+- Pose Estimation with OpenPose: The system leveraged OpenPose for camera-based pose detection. This was a critical component for predicting COP changes directly from visual data, demonstrating the potential for non-invasive assessment.
+- Multi-Modal Comparison: My study involved a rigorous 3-way comparison between the simulator's ground truth position, pressure mat COP data, and computer-vision pose detection. This allowed for a deep understanding of the factors influencing limb joint positions and their correlation with COP.
+- Validation of Computer Vision: The results were highly promising, demonstrating a high correlation (r0.79) between camera-predicted joint positions and COP location for movements along the caudal-cephalic axis. This strongly supports the feasibility of predicting COP from a computer-vision system.
 
-The classical Amonton's laws state:
-- Friction force is directly proportional to applied load
-- Friction force is independent of apparent contact area
-- Kinetic friction is independent of sliding velocity
+## Impact and Future Directions
+This project represents a significant contribution to the development of quantitative and low-cost tools for early neuromotor assessment. The robotic infant simulator now serves as a robust and repeatable platform for future controlled experiments, allowing researchers to further refine the intricate relationship between infant movement and critical biomechanical indicators of neurodevelopmental health.
 
-The mathematical model for friction follows Coulomb's equation:
-```
-Ff = μ × Fn
-```
-Where:
-- Ff is the friction force
-- μ is the coefficient of friction 
-- Fn is the normal force
+## Research Lab and Principal Investigator
 
-## Design Methodology
+- **Lab Name:** <a href="https://www.med.upenn.edu/rehabilitation-robotics-lab/">Rehabilitation Robotics Lab</a>
+- **Principal Investigator:** Dr. Michelle Johnson
+- **Institution:** University of Pennsylvania
 
-I followed an iterative design process, developing two prototypes (Alpha and Beta) with improvements based on testing and performance evaluation:
+## Learn More: Publication
 
-### Design Requirements
-1. Measure vertical force (Fv) and horizontal force (Fh) at the finger-surface interface
-2. Create controlled slip between finger and test surface
-3. Record force data for friction coefficient calculation
-4. Allow testing of multiple surface materials
-5. Provide consistent, repeatable measurements
-
-## Tribometer Setup Alpha
-
-The first prototype used a linear guide mechanism inspired by printer cartridge movement:
-
-![Tribometer Setup Alpha](/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG)
-
-### Key Components
-- **Base**: 10mm wood sheet for stability and workability
-- **Linear Motion System**: Precision linear guide rail with ball bearing slide block
-- **Actuation**: DC geared motor (12V, 45kg-cm torque) 
-- **Motion Transfer**: Timing pulley and belt system (2mm pitch)
-- **Sensing**: ATI multi-dimensional force sensor
-- **Control**: Arduino Uno microcontroller with LabVIEW integration
-- **Power**: 12V DC power supply
-
-### Working Principle
-The test surface attached to the force sensor moves horizontally while the subject places their finger on the surface with controlled vertical force. As the motor rotates, the timing belt drives the linear slide, creating relative motion between the finger and test surface. The force sensor continuously measures both vertical force (Fv) and horizontal friction force (Fh), allowing calculation of the coefficient of friction (μ = Fh/Fv).
-
-### Technical Challenges
-During testing of Setup Alpha, I identified two main issues:
-1. High friction in the linear motion system
-2. Difficulty maintaining consistent tension in the timing belt
-
-## Tribometer Setup Beta
-
-To address these challenges, I designed Setup Beta using a capstan-bowstring mechanism:
-
-![Tribometer Setup Beta](/assets/images/iitm_friction_measurement_capston_setup.JPG)
-
-### Design Improvements
-- **Capstan Drive**: Replaced timing belt with a stainless steel cable (1.2mm diameter) wrapped around a custom-designed capstan
-- **Tension Control**: Added spring mechanism to maintain consistent cable tension
-- **Movable Base**: Redesigned component to connect the cable to the slide block
-- **Reduced Friction**: Modified system reduced mechanical resistance in the linear motion
-
-### Technical Details
-- **Motor**: Same 60rpm, 45kg-cm torque DC geared motor
-- **Capstan**: Custom designed with 20mm diameter, V-thread groove (1.5mm pitch)
-- **Linear Speed**: Approximately 6 cm/s
-- **Spring Constant**: ~2 kg/cm for maintaining cable tension
-- **Control System**: Same Arduino + LabVIEW integration for precise motor control and data acquisition
-
-## Software Integration
-
-The control and data acquisition system combined Arduino for low-level motor control with LabVIEW for the user interface and data processing:
-
-### Arduino Development
-I wrote several iterations of Arduino code to control motor direction and speed, including:
-- Basic ON/OFF control
-- Direction control with switch input
-- Speed control using potentiometer input
-- Integrated control through LabVIEW communication
-
-### LabVIEW Interface
-The LabVIEW virtual instruments (VIs) provided:
-- Real-time force data visualization
-- Motor speed and direction control
-- Data recording and export capabilities
-- Integrated experimental workflow
-
-
-
-## Results and Analysis
-
-With the tribometer setup, we could analyze:
-
-1. Static coefficient of friction between finger digits and various materials
-2. Changes in friction with varying normal force
-3. Differences between static and kinetic friction coefficients
-4. Verification of Amonton's laws for skin-surface interfaces
-
-By plotting Fh against Fv at the moment of slip, we could determine the coefficient of friction as the slope of the resulting curve.
-
-## Skills Applied
-
-This project allowed me to apply and develop several technical skills:
-
-- **Mechanical Design**: Creating custom mechanisms and selecting appropriate components
-- **CAD Modeling**: Designing custom parts for the experimental setup
-- **Electronics**: Motor driver circuit design and sensor integration
-- **Programming**: Arduino coding and LabVIEW development
-- **Data Analysis**: Processing force sensor data to calculate friction coefficients
-- **Problem Solving**: Identifying issues in the first prototype and developing improvements
-- **Research Application**: Implementing theoretical concepts in a practical measurement system
-
-## Future Improvements
-
-Based on my experience with both prototypes, I identified several potential improvements:
-
-1. Using a motor with optical feedback for more precise position control
-2. Implementing a dedicated battery power supply for portability
-3. Testing different cable materials and diameters for the bowstring mechanism
-4. Redesigning the movable base for better ergonomics and reduced interference
-5. Adding automatic test sequencing for improved experimental reproducibility
-
-## Conclusion
-
-This tribometer project successfully combined principles of mechanical design, electronics, and software integration to create a functional scientific instrument. The iterative design process allowed me to identify and solve technical challenges, resulting in a system capable of measuring and analyzing the complex frictional properties between human skin and various materials.
-
-The experience gained in this project has strengthened my skills in mechatronics system design, instrumentation, and experimental methodology—all valuable capabilities for future engineering challenges.
+<b>Panchal J</b>, Sowande OF , Prosser L, Johnson MJ. <b>Design of pediatric robot to simulate infant biomechanics for neuro-developmental assessment in a sensorized gym.</b> Proc IEEE RAS EMBS Int Conf Biomed Robot Biomechatron. 2022 Aug;2022:10.1109/biorob52689.2022.9925371 <a href="https://pubmed.ncbi.nlm.nih.gov/37041966/">Link</a>
