@@ -36,6 +36,7 @@
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 
-@import "minimal-mistakes/_custom_cards"; // custom cards
-@import "minimal-mistakes/_resume"; // custom styles
+@import "minimal-mistakes/custom_cards"; // custom cards
+@import "minimal-mistakes/resume"; // custom styles
 @import "minimal-mistakes/toc"; // Table of contents
+@import "minimal-mistakes/custom_misc"; // Featured images

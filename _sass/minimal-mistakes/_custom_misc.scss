@@ -1,0 +1,57 @@
+figure.center figcaption {
+  text-align: center !important;
+  font-style:italic;
+}
+
+figure.m-figure.center figcaption {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+}
+.m-figure.center figcaption {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+}
+
+// Download button
+.download-button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: right;
+  z-index: 2;
+  opacity: 1;
+  
+  .tag {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0.2em 0.8em;
+    border-radius: 7px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 1px solid #d2dbe1;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #6a6b6d;
+      border-color: #bbc4cb;
+      color : #ffffff;
+      text-decoration: none;
+    }
+
+    &.active {
+      background-color: #444;
+      color: #ffffff;
+      border-color: #444;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.download-button--left {
+  justify-content: left;  // or whatever you want: center, space-between, etc.
+}
