@@ -7,7 +7,7 @@ tags:
   - Acoustics
   - Robots
   - CAD
-  - Wireless Communication
+  - Wireless-Communication
 excerpt: "A deep dive into my Bachelor's thesis work on designing and developing communication and tracking modules for a Pipeline Health Monitoring Robot (PHMR) using Helmholtz resonators and ZigBee protocol."
 header:
   image: "/assets/images/projects/upenn_thesis_part1_methods2.png"
