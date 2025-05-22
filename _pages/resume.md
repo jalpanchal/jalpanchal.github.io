@@ -530,43 +530,6 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
   display: none;
 }
 
-.download-button {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  justify-content: right;
-  z-index: 2;
-  opacity: 1;
-  
-  .tag {
-    background-color: #ffffff;
-    color: #333333;
-    padding: 0.2em 0.8em;
-    border-radius: 7px;
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: capitalize;
-    cursor: pointer;
-    border: 1px solid #d2dbe1;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    text-decoration: none;
-
-    &:hover {
-      background-color: #6a6b6d;
-      border-color: #bbc4cb;
-      color : #ffffff;
-      text-decoration: none;
-    }
-
-    &.active {
-      background-color: #444;
-      color: #ffffff;
-      border-color: #444;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
-  }
-}
-
 .skills-container {
   display: flex;
   margin-top: 2rem;

@@ -1,168 +1,61 @@
 ---
-title: "IITK - Capstone Project"
+title: "Innovating Robot tracking"
+date: 2015-05-21 # Or the date you'd like to publish this post
 categories:
   - Projects
 tags:
-  - Prototyping
+  - Acoustics
+  - Robots
   - CAD
-  - Robot
-  - LabVIEW
-  - Arduino
-# author_profile: false
-# layout: archive
+  - Wireless Communication
+excerpt: "A deep dive into my Bachelor's thesis work on designing and developing communication and tracking modules for a Pipeline Health Monitoring Robot (PHMR) using Helmholtz resonators and ZigBee protocol."
 header:
-  image: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
-  teaser: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
-# toc: true
-# toc_sticky: true
-# featured: true
+  image: "/assets/images/projects/upenn_thesis_part1_methods2.png"
+  teaser: /assets/images/projects/upenn_thesis_thumbnail.png # Optional: Add a relevant image path here
+toc: false
+featured: true
 ---
 
-## Project Overview
+## My Bachelor's Journey into Pipeline Health Monitoring
+As part of my Bachelor of Technology degree in Mechatronics Engineering at Manipal Institute of Technology, I embarked on a project to design and develop a sophisticated communication and tracking module for a Pipeline Health Monitoring Robot (PHMR). This initiative was a response to a project from Gas Authority of India Ltd. (GAIL) given to Indian Institute of Technology, Kanpur, aimed at developing a system to inspect natural gas pipelines for defects using a conduit crawler robot. My role involved creating innovative solutions for accurately locating and communicating with the robot as it navigated through pipelines.
 
-During my Summer Fellowship at the Neuromechanics Lab, Department of Applied Mechanics, IIT Madras, I designed and developed a tribometer setup to study the frictional properties between human fingers and various surface materials. This project combined mechanical design, instrumentation, electronics, and software integration to create a functional system for analyzing skin-material friction coefficients.
+This thesis explored two distinct yet complementary systems for tracking the PHMR's motion inside pipelines: an acoustic tracking system utilizing a Helmholtz resonator and a wireless location monitoring system leveraging ZigBee communication protocol. The goal was to provide efficient and reliable methods for monitoring the robot's live movement during operation.
 
-## The Challenge
+## Part 1: Acoustic Tracking with Helmholtz Resonators
+The first part of my project focused on developing an acoustic tracking system. Given that the PHMR would operate within natural gas pipelines, an energy-efficient solution was paramount. We decided to design a system that could generate a sound signal using the flow of the gas itself, eliminating the need for external electronic sound generation.
 
-The human hand is remarkably complex in its interactions with surfaces. While Amonton's laws of friction provide a general framework for understanding friction between solid surfaces, the unique properties of human skin create interesting variations that aren't fully explained by classical friction models. 
+### The Helmholtz Resonator Concept
+A Helmholtz resonator, essentially a container of gas with an open hole, vibrates due to the 'springiness' of the air inside when excited by an air jet. This principle is similar to blowing across the top of an empty bottle to produce a sound. The oscillating air in the neck acts like a mass on a spring, and the internal air volume provides the 'springiness'.
 
-Our objective was to create an instrument that could:
-- Measure the coefficient of friction between finger digits and various test surfaces
-- Analyze variations in friction with different applied forces
-- Compare experimental results with theoretical friction models
-- Generate reliable, repeatable measurements for scientific study
+We designed a Helmholtz resonator with a target resonant frequency of 200 Hz. This low frequency was chosen because acoustic analyses indicate that lower frequency sound signals experience less attenuation and have higher transmission across multiple media, which is crucial for signals traveling from the gas medium to the pipe wall. The resonator was intended to be embedded within the PHMR's body, generating the sound signal as the robot moved with the fuel flow.
 
-## Technical Background
+### Experimental Insights
+Extensive experiments were conducted to understand sound propagation through pipe walls. Initial tests using a speaker as a sound source and microphones/accelerometers as receivers revealed that sound primarily propagated through the air medium, with poor transmission through the carbon steel pipe wall. High attenuation was observed when sound signals attempted to cross from air to the pipe material.
 
-Before diving into the design, I studied the fundamentals of friction mechanics and previous research in the field:
+Further experiments involved using an impact hammer to generate sound directly on the pipe wall. While this confirmed sound generation within the wall, its transmission along the pipe was very poor and highly attenuated, largely due to the pipe's coating absorbing the signals. These findings underscored the necessity of a low-frequency, directly excited acoustic source like the Helmholtz resonator and led to the consideration of highly sensitive receivers (e.g., sensitive microphones placed flush with the inner pipe wall or piezoelectric strips) to capture the vibrations.
 
-### Friction Fundamentals
-- **Dry friction** resistance between two solid surfaces in contact
-- **Static friction** (μs) between non-moving surfaces
-- **Kinetic friction** (μk) between moving surfaces in relative motion
+## Part 2: Wireless Location Monitoring with Odometer and Xbee
+The second crucial component of the PHMR tracking system was a wireless location monitoring system. The objective was to provide live tracking of the robot's movement using wireless communication. This system integrated an odometer for distance measurement and Xbee modules for reliable wireless data transmission using the ZigBee communication protocol.
 
-The classical Amonton's laws state:
-- Friction force is directly proportional to applied load
-- Friction force is independent of apparent contact area
-- Kinetic friction is independent of sliding velocity
+### The Odometer and Xbee Integration
+The wireless system comprised a transmitter module within the PHMR and a receiver at a base station.
 
-The mathematical model for friction follows Coulomb's equation:
-```
-Ff = μ × Fn
-```
-Where:
-- Ff is the friction force
-- μ is the coefficient of friction 
-- Fn is the normal force
-
-## Design Methodology
-
-I followed an iterative design process, developing two prototypes (Alpha and Beta) with improvements based on testing and performance evaluation:
-
-### Design Requirements
-1. Measure vertical force (Fv) and horizontal force (Fh) at the finger-surface interface
-2. Create controlled slip between finger and test surface
-3. Record force data for friction coefficient calculation
-4. Allow testing of multiple surface materials
-5. Provide consistent, repeatable measurements
-
-## Tribometer Setup Alpha
-
-The first prototype used a linear guide mechanism inspired by printer cartridge movement:
-
-![Tribometer Setup Alpha](/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG)
-
-### Key Components
-- **Base**: 10mm wood sheet for stability and workability
-- **Linear Motion System**: Precision linear guide rail with ball bearing slide block
-- **Actuation**: DC geared motor (12V, 45kg-cm torque) 
-- **Motion Transfer**: Timing pulley and belt system (2mm pitch)
-- **Sensing**: ATI multi-dimensional force sensor
-- **Control**: Arduino Uno microcontroller with LabVIEW integration
-- **Power**: 12V DC power supply
-
-### Working Principle
-The test surface attached to the force sensor moves horizontally while the subject places their finger on the surface with controlled vertical force. As the motor rotates, the timing belt drives the linear slide, creating relative motion between the finger and test surface. The force sensor continuously measures both vertical force (Fv) and horizontal friction force (Fh), allowing calculation of the coefficient of friction (μ = Fh/Fv).
-
-### Technical Challenges
-During testing of Setup Alpha, I identified two main issues:
-1. High friction in the linear motion system
-2. Difficulty maintaining consistent tension in the timing belt
-
-## Tribometer Setup Beta
-
-To address these challenges, I designed Setup Beta using a capstan-bowstring mechanism:
-
-![Tribometer Setup Beta](/assets/images/iitm_friction_measurement_capston_setup.JPG)
-
-### Design Improvements
-- **Capstan Drive**: Replaced timing belt with a stainless steel cable (1.2mm diameter) wrapped around a custom-designed capstan
-- **Tension Control**: Added spring mechanism to maintain consistent cable tension
-- **Movable Base**: Redesigned component to connect the cable to the slide block
-- **Reduced Friction**: Modified system reduced mechanical resistance in the linear motion
-
-### Technical Details
-- **Motor**: Same 60rpm, 45kg-cm torque DC geared motor
-- **Capstan**: Custom designed with 20mm diameter, V-thread groove (1.5mm pitch)
-- **Linear Speed**: Approximately 6 cm/s
-- **Spring Constant**: ~2 kg/cm for maintaining cable tension
-- **Control System**: Same Arduino + LabVIEW integration for precise motor control and data acquisition
-
-## Software Integration
-
-The control and data acquisition system combined Arduino for low-level motor control with LabVIEW for the user interface and data processing:
-
-### Arduino Development
-I wrote several iterations of Arduino code to control motor direction and speed, including:
-- Basic ON/OFF control
-- Direction control with switch input
-- Speed control using potentiometer input
-- Integrated control through LabVIEW communication
-
-### LabVIEW Interface
-The LabVIEW virtual instruments (VIs) provided:
-- Real-time force data visualization
-- Motor speed and direction control
-- Data recording and export capabilities
-- Integrated experimental workflow
-
-
-
-## Results and Analysis
-
-With the tribometer setup, we could analyze:
-
-1. Static coefficient of friction between finger digits and various materials
-2. Changes in friction with varying normal force
-3. Differences between static and kinetic friction coefficients
-4. Verification of Amonton's laws for skin-surface interfaces
-
-By plotting Fh against Fv at the moment of slip, we could determine the coefficient of friction as the slope of the resulting curve.
-
-## Skills Applied
-
-This project allowed me to apply and develop several technical skills:
-
-- **Mechanical Design**: Creating custom mechanisms and selecting appropriate components
-- **CAD Modeling**: Designing custom parts for the experimental setup
-- **Electronics**: Motor driver circuit design and sensor integration
-- **Programming**: Arduino coding and LabVIEW development
-- **Data Analysis**: Processing force sensor data to calculate friction coefficients
-- **Problem Solving**: Identifying issues in the first prototype and developing improvements
-- **Research Application**: Implementing theoretical concepts in a practical measurement system
-
-## Future Improvements
-
-Based on my experience with both prototypes, I identified several potential improvements:
-
-1. Using a motor with optical feedback for more precise position control
-2. Implementing a dedicated battery power supply for portability
-3. Testing different cable materials and diameters for the bowstring mechanism
-4. Redesigning the movable base for better ergonomics and reduced interference
-5. Adding automatic test sequencing for improved experimental reproducibility
+Odometer Assembly: The odometer was assembled with a wheel containing an LED on one side and a Light Dependent Resistor (LDR) on the other, designed to measure the distance traveled by the robot. This assembly was integrated into the transmission module inside the PHMR.
+- Xbee Communication: Xbee Pro S1 PCB antenna modules were used for wireless communication. The transmitter part utilized an Arduino Uno R3 board with an Xbee module, while the receiver at the base station used an Intel Galileo Gen 2 board also equipped with an Xbee module. This setup allowed for continuous communication and transmission of the PHMR's location data.
+- Live Motion Tracking: The system was designed to show the live movement of the PHMR at the base station, which was critical for operational monitoring. The block diagrams illustrated how the odometer's data would be processed and transmitted wirelessly, enabling real-time tracking of the robot's position.
+- This wireless module provided a robust and energy-efficient solution for tracking the PHMR, complementing the acoustic system by offering a direct method for live position updates within the pipeline.
 
 ## Conclusion
+My undergraduate thesis successfully designed and developed two distinct yet interconnected systems for pipeline health monitoring robots: an innovative acoustic tracking system using Helmholtz resonators and a wireless location monitoring system integrating an odometer with Xbee/ZigBee communication. This work contributed to advancing non-intrusive pipeline inspection technologies, addressing the challenges of communication and tracking within complex and harsh environments like natural gas pipelines. The insights gained from the Helmholtz resonator experiments, particularly regarding sound propagation in pipes, and the successful implementation of the wireless tracking module lay a strong foundation for future developments in this field.
 
-This tribometer project successfully combined principles of mechanical design, electronics, and software integration to create a functional scientific instrument. The iterative design process allowed me to identify and solve technical challenges, resulting in a system capable of measuring and analyzing the complex frictional properties between human skin and various materials.
+## Research Lab and Principal Investigator
+- **Institution:** Manipal Institute of Technology, Manipal University (for Bachelor of Technology) 
+- **Internship Host:** Smart Material Structures and Systems (SMSS) Laboratory, Department of Mechanical Engineering, Indian Institute of Technology Kanpur 
+- **Project Guide (Manipal University):** Ms. Sherine Jesna V. A. 
+- **Project Guide (IIT Kanpur):** Dr. Bishakh Bhattacharya 
 
-The experience gained in this project has strengthened my skills in mechatronics system design, instrumentation, and experimental methodology—all valuable capabilities for future engineering challenges.
+## Learn More:
+
+<div class="download-button download-button--left"><a href="/assets/files/JalPanchal_UndergradThesis.pdf" class="tag">Download Undergrad Thesis PDF</a></div>
+
+Thanks for reading! If you're interested in pipeline robotics, acoustic sensing, wireless communication, or mechatronics — feel free to reach out or browse my other projects.

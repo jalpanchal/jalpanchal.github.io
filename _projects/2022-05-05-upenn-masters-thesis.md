@@ -22,8 +22,6 @@ featured: true
 
 As part of my Master's thesis in Robotics at the University of Pennsylvania, I embarked on a fascinating journey to explore how we can better understand and monitor behavioral states in seizure patients. This work combined cutting-edge network neuroscience with practical insights from everyday wearable devices like the Apple Watch. The ultimate goal is to move towards providing real-time behavioral feedback for individuals living with epilepsy.
 
-<p style="color: red; text-align: center;">Test: This should be red and centered</p>
-
 ## Part 1: Decoding Brain Activity with Network Neuroscience
 <figure class="m-figure center">
   <img src="/assets/images/projects/upenn_thesis_part1_methods.png" alt="calculation of temporal changes in HRV and network properties" />
