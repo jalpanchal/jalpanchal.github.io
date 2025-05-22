@@ -11,7 +11,7 @@ tags:
 # layout: archive
 header:
   image: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
-  teaser: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
+  teaser: /assets/images/projects/upenn_infantsim_thumbnail.png
 toc: false
 # toc_sticky: true
 featured : true
@@ -48,7 +48,7 @@ Visual Data Capture: A GoPro Hero 4 Session camera captured video at 1080p, 30 f
 ## Computer Vision and Data Analysis
 - Pose Estimation with OpenPose: The system leveraged OpenPose for camera-based pose detection. This was a critical component for predicting COP changes directly from visual data, demonstrating the potential for non-invasive assessment.
 - Multi-Modal Comparison: My study involved a rigorous 3-way comparison between the simulator's ground truth position, pressure mat COP data, and computer-vision pose detection. This allowed for a deep understanding of the factors influencing limb joint positions and their correlation with COP.
-- Validation of Computer Vision: The results were highly promising, demonstrating a high correlation (r0.79) between camera-predicted joint positions and COP location for movements along the caudal-cephalic axis. This strongly supports the feasibility of predicting COP from a computer-vision system.
+- Validation of Computer Vision: The results were highly promising, demonstrating a high correlation (r=0.79) between camera-predicted joint positions and COP location for movements along the caudal-cephalic axis. This strongly supports the feasibility of predicting COP from a computer-vision system.
 
 ## Impact and Future Directions
 This project represents a significant contribution to the development of quantitative and low-cost tools for early neuromotor assessment. The robotic infant simulator now serves as a robust and repeatable platform for future controlled experiments, allowing researchers to further refine the intricate relationship between infant movement and critical biomechanical indicators of neurodevelopmental health.
