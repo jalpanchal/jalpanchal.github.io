@@ -11,8 +11,8 @@ tags:
 # author_profile: false
 layout: single
 header:
-  image: /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
-  teaser : /assets/images/iitm_friction_measurement_timingbelt_setup2.JPG
+  image: /assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG
+  teaser : /assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG
 toc: true
 # toc_sticky: true
 featured: true

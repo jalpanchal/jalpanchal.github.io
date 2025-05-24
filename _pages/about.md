@@ -27,16 +27,16 @@ Let's connect:
 
 <div class="gallery-container">
   <div class="gallery-item w-1">
-      <img src="/assets/images/iitm_friction_measurement_capston_setup.JPG" alt="Gallery Image 1">
+      <img src="/assets/images/projects/iitm_friction_measurement_capston_setup.JPG" alt="Gallery Image 1">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/infantsim_cad.png" alt="Gallery Image 2">
+    <img src="/assets/images/projects/upenn_infantsim_cad.png" alt="Gallery Image 2">
   </div>
   <div class="gallery-item w-1">
     <img src="/assets/images/jal_ecg_mm.jpg" alt="Gallery Image 3">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/cis541_pacemaker_circuit.jpg" alt="Gallery Image 3">
+    <img src="/assets/images/projects/upenn_cis541_pacemaker_circuit.jpg" alt="Gallery Image 3">
   </div>
    <div class="gallery-item w-3">
     <video controls autoplay loop muted>
@@ -45,22 +45,22 @@ Let's connect:
     </video>
   </div>
   <div class="gallery-item w-1">
-      <img src="/assets/images/iitk_helmholtzresonator_cad.PNG" alt="Gallery Image 1">
+      <img src="/assets/images/projects/iitk_helmholtzresonator_cad.PNG" alt="Gallery Image 1">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/iitk_helmholtzresonator_comsol.PNG" alt="Gallery Image 2">
+    <img src="/assets/images/projects/iitk_helmholtzresonator_comsol.PNG" alt="Gallery Image 2">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/iitk_helmholtzresonator.JPG" alt="Gallery Image 3">
+    <img src="/assets/images/projects/iitk_helmholtzresonator.JPG" alt="Gallery Image 3">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/iitk_jal_helmholtsresonator_exp.JPG" alt="Gallery Image 3">
+    <img src="/assets/images/projects/iitk_jal_helmholtsresonator_exp.JPG" alt="Gallery Image 3">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 4">
+    <img src="/assets/images/projects/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 4">
   </div>
   <div class="gallery-item w-1">
-    <img src="/assets/images/iitm_friction_measurement_timingbelt_setup2.JPG" alt="Gallery Image 4">
+    <img src="/assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG" alt="Gallery Image 4">
   </div>
   <div class="gallery-item rw-2">
     <img src="/assets/images/jal_cycle_atlanticcity.jpeg" alt="Gallery Image 4">
@@ -81,7 +81,7 @@ Let's connect:
     </video>
   </div>
   <div class="gallery-item w-2">
-    <img src="/assets/images/ jal_frinds_kayak.jpg" alt="Gallery Image 5">
+    <img src="/assets/images/jal_frinds_kayak.jpg" alt="Gallery Image 5">
   </div>
   <div class="gallery-item rw-2">
     <video controls autoplay loop muted>
@@ -91,7 +91,7 @@ Let's connect:
   </div>
 
   <div class="gallery-item w-1">
-    <img src="/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 5">
+    <img src="/assets/images/projects/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 5">
   </div>
    <div class="gallery-item r-2">
     <img src="/assets/images/jal_qualcomm_shenzhen.jpeg" alt="Gallery Image 5">

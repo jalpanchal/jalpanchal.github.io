@@ -7,7 +7,7 @@ tags:
   - Wearables
   - ECG
   - EEG
-  - Apple-Watch
+  - Apple-ckout masterWatch
   - Fitbit
   - Neuroscience
 excerpt: "A deep dive into my Master's thesis work on understanding and monitoring behavioral states in seizure patients using network neuroscience and wearable devices."
