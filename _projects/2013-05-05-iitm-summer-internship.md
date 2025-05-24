@@ -15,7 +15,7 @@ header:
   teaser : /assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG
 toc: true
 # toc_sticky: true
-featured: true
+# featured: true
 ---
 
 ## Project Overview
