@@ -7,7 +7,7 @@ tags:
   - Wearables
   - ECG
   - EEG
-  - Apple-ckout masterWatch
+  - Apple-Watch
   - Fitbit
   - Neuroscience
 excerpt: "A deep dive into my Master's thesis work on understanding and monitoring behavioral states in seizure patients using network neuroscience and wearable devices."
@@ -24,7 +24,9 @@ As part of my Master's thesis in Robotics at the University of Pennsylvania, I e
 
 ## Part 1: Decoding Brain Activity with Network Neuroscience
 <figure class="m-figure center">
+<a href="/assets/images/projects/upenn_thesis_part1_methods.png" class="popup">
   <img src="/assets/images/projects/upenn_thesis_part1_methods.png" alt="calculation of temporal changes in HRV and network properties" />
+</a>
   <figcaption>Steps in calculation of temporal changes in HRV and network properties.</figcaption>
 </figure>
 
@@ -44,7 +46,9 @@ We used intracranial EEG (brain activity) and ECG (heart activity) data from 12 
 4.  **Heart Rate Variability (HRV) Analysis:** Simultaneously, we analyzed ECG signals to derive various HRV parameters, including Heart Rate (HR), Root Mean Square of Successive Differences (RMSSD), Low Frequency (LF) to High Frequency (HF) ratio (LF/HF), and SD1/SD2. These parameters provide insights into the balance of sympathetic and parasympathetic activity in the ANS.
 
 <figure class="m-figure center">
+<a href="/assets/images/projects/upenn_thesis_part1_methods2.png" class="popup">
   <img src="/assets/images/projects/upenn_thesis_part1_methods2.png" alt="calculation of temporal changes in HRV and network properties" />
+</a>
   <figcaption>Node clustering using flexibility</figcaption>
 </figure>
 
@@ -52,7 +56,9 @@ We used intracranial EEG (brain activity) and ECG (heart activity) data from 12 
 Our analysis revealed a significant association between HRV parameters and changes in brain network properties, particularly for a specific subset of brain regions. We found that brain regions with *low flexibility* (Cluster 1) showed the strongest correlations with HRV parameters. Among the HRV parameters, Heart Rate (HR) consistently showed the strongest correlation with changes in network strength and global efficiency. This suggests that specific, less-changing brain regions might be more tightly linked to autonomic nervous system activity before a seizure. This is a crucial step towards understanding the complex interplay between brain activity and ANS changes, which can eventually inform behavioral feedback strategies for epilepsy management.
 
 <figure class="m-figure center">
+<a href="/assets/images/projects/upenn_thesis_part1_summary.png" class="popup">
   <img src="/assets/images/projects/upenn_thesis_part1_summary.png" alt="Summary" />
+</a>
   <figcaption>Summary of correlation between HRV parameters and network parameters across all subjects</figcaption>
 </figure>
 ---
@@ -84,9 +90,14 @@ We compared the heart rate and HRV measurements from the wearables against the E
 </div> -->
 
 <figure class="m-figure center">
+
   <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <a href="/assets/images/projects/upenn_thesis_ecg_processing1.png" class="popup">
     <img src="/assets/images/projects/upenn_thesis_ecg_processing1.png" alt="ECG signal processing" style="max-width: 45%;"/>
+  </a>
+  <a href="/assets/images/projects/upenn_thesis_ecg_processing2.png" class="popup">
     <img src="/assets/images/projects/upenn_thesis_ecg_processing2.png" alt="ECG signal processing and HRV computation" style="max-width: 45%;"/>
+  </a>
   </div>
   <figcaption>ECG signal processing</figcaption>
   </figure>
@@ -99,7 +110,9 @@ We compared the heart rate and HRV measurements from the wearables against the E
 Despite the limitations in HRV accuracy, we explored a method to identify behavioral states around a seizure using hourly average values of RMSSD and HF values from non-seizure days as a baseline. From an initial analysis of 9 seizures across 3 subjects, we observed a promising trend: the RMSSD state decreased from a higher state to a lower state before a seizure started. This observation aligns with similar findings in athletes, where a drop in RMSSD can indicate fatigue. This suggests a potential for identifying stress or fatigue as a precursor to seizures, offering valuable insights for patients.
 
 <figure class="m-figure center">
+<a href="/assets/images/projects/upenn_thesis_part2_hrv_level_001_sz1.png" class="popup">
   <img src="/assets/images/projects/upenn_thesis_part2_hrv_level_001_sz1.png" alt="HRV states around seizure" />
+</a>
   <figcaption>HRV states around seizure</figcaption>
 </figure>
 

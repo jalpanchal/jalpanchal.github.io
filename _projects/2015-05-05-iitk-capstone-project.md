@@ -30,6 +30,12 @@ A Helmholtz resonator, essentially a container of gas with an open hole, vibrate
 We designed a Helmholtz resonator with a target resonant frequency of 200 Hz. This low frequency was chosen because acoustic analyses indicate that lower frequency sound signals experience less attenuation and have higher transmission across multiple media, which is crucial for signals traveling from the gas medium to the pipe wall. The resonator was intended to be embedded within the PHMR's body, generating the sound signal as the robot moved with the fuel flow.
 
 ### Experimental Insights
+<figure class="m-figure center">
+  <a href="/assets/images/projects/iitk_helmholtzresonator_fft.jpg" class="popup">
+    <img src="/assets/images/projects/iitk_helmholtzresonator_fft.jpg" alt="Helmholtz Resonator FFT" />
+  </a>
+  <figcaption>Testing Resonance Frequency of Helmholtz Resonator</figcaption>
+</figure>
 Extensive experiments were conducted to understand sound propagation through pipe walls. Initial tests using a speaker as a sound source and microphones/accelerometers as receivers revealed that sound primarily propagated through the air medium, with poor transmission through the carbon steel pipe wall. High attenuation was observed when sound signals attempted to cross from air to the pipe material.
 
 Further experiments involved using an impact hammer to generate sound directly on the pipe wall. While this confirmed sound generation within the wall, its transmission along the pipe was very poor and highly attenuated, largely due to the pipe's coating absorbing the signals. These findings underscored the necessity of a low-frequency, directly excited acoustic source like the Helmholtz resonator and led to the consideration of highly sensitive receivers (e.g., sensitive microphones placed flush with the inner pipe wall or piezoelectric strips) to capture the vibrations.

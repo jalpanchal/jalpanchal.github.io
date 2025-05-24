@@ -27,7 +27,9 @@ Developmental disorders are a major cause of childhood disability. Early diagnos
 
 ## My Solution: A 4-DOF Robotic Infant Simulator
 <figure class="m-figure center">
-  <img src="/assets/images/projects/upenn_infantsim_cad_dh.png" alt="Infant Simulator CAD" />
+<a href="/assets/images/projects/upenn_infantsim_cad_dh.jpg" class="popup">
+  <img src="/assets/images/projects/upenn_infantsim_cad_dh.jpg" alt="Infant Simulator CAD" />
+</a>
   <figcaption>Robotic Infant Simulator Development</figcaption>
 </figure>
 
@@ -44,14 +46,18 @@ This project was a comprehensive exercise in robotic system development, demonst
 
 ## Kinematics and Modeling
 <figure class="m-figure center">
+<a href="/assets/images/projects/upenn_infantsim_ee_sweep.jpg" class="popup">
   <img src="/assets/images/projects/upenn_infantsim_ee_sweep.jpg" alt="Infant EE Sweep" />
+</a>
   <figcaption>Kinematic Model Simulations</figcaption>
 </figure>
 - Forward Kinematics (FK) Model: I developed a robust FK model for each limb using the Denavit-Hartenberg (DH) convention. This allowed for precise calculation of joint locations and accurate prediction of the Center of Mass (COM) for various limb angles, providing essential ground truth data for simulator movements.
 - Coordinate Transformations: Complex transformations were implemented to seamlessly shift joint references from individual limb frames to the simulator's frame, and subsequently to the PANDA Gym's mat frame, ensuring accurate spatial mapping and integration.
 
 <figure class="m-figure center">
+<a href="/assets/images/projects/upenn_infantsim_sigpro_chart.jpg" class="popup">
   <img src="/assets/images/projects/upenn_infantsim_sigpro_chart.jpg" alt="Signal Processing Flow Chart" />
+</a>
   <figcaption>Signal Processing Flow Chart</figcaption>
 </figure>
 
@@ -61,7 +67,9 @@ Visual Data Capture: A GoPro Hero 4 Session camera captured video at 1080p, 30 f
 - Synchronized Data Streams: Data from motor joint positions (12.5 Hz), camera video, and pressure mat COP were carefully synchronized and recorded, enabling comprehensive, multi-modal analysis.
 
 <figure class="m-figure center">
+<a href="/assets/images/projects/upenn_infantsim_cam_sigpro_all.png" class="popup">
   <img src="/assets/images/projects/upenn_infantsim_cam_sigpro_all.png" alt="Signal Processing Flow Chart" />
+</a>
   <figcaption>Pose Detection and Signal Processing</figcaption>
 </figure>
 
@@ -72,7 +80,7 @@ Visual Data Capture: A GoPro Hero 4 Session camera captured video at 1080p, 30 f
 - Validation of Computer Vision: The results were highly promising, demonstrating a high correlation (r=0.79) between camera-predicted joint positions and COP location for movements along the caudal-cephalic axis. This strongly supports the feasibility of predicting COP from a computer-vision system.
 <figure class="m-figure center">
   <video controls autoplay loop muted style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-    <source src="/assets/videos/infantsim_openpose.mp4" type="video/mp4">
+    <source src="/assets/videos/upenn_infantsim_openpose.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <figcaption>Pose Detection using OpenPose Model</figcaption>
@@ -84,7 +92,7 @@ This project represents a significant contribution to the development of quantit
 
 <figure class="m-figure center">
   <video controls autoplay loop muted style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-    <source src="/assets/videos/infantsim_rhanimation.mp4" type="video/mp4">
+    <source src="/assets/videos/upenn_infantsim_rhanimation.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <figcaption>Comparison of Arm trajectory from Simulator vs Computer Vision and Comparison of CoM changes from Simulator vs CoP changes from Pressure sensitive Mat.</figcaption>
