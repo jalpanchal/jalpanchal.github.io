@@ -159,15 +159,38 @@ Let's connect:
 
 
 
+
+  <div class="gallery-item rw-2">
+  <a href="/assets/images/jal_MITNewsArticle.jpg" class="popup">
+    <img src="/assets/images/jal_MITNewsArticle.jpg" alt="Gallery Image 5">
+  </a>
+  </div>
+
+
+  <div class="gallery-item r-2">
+  <a href="/assets/images/jal_strave_phltoatlanticcity.jpg" class="popup">
+    <img src="/assets/images/jal_strave_phltoatlanticcity.jpg" alt="Gallery Image 5">
+  </a>
+  </div>
+
+
+
+
+
   <div class="gallery-item w-3">
     <video controls autoplay loop muted>
       <source src="/assets/videos/iitk_phmr_labview.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
+  
 
 
-
+  <div class="gallery-item w-1">
+  <a href="/assets/images/jal_goldmedal_Udayavahini.jpg" class="popup">
+    <img src="/assets/images/jal_goldmedal_Udayavahini.jpg" alt="Gallery Image 5">
+  </a>
+  </div>
   
   <div class="gallery-item w-1">
   <a href="/assets/images/projects/iitk_helmholtzresonator.JPG" class="popup">
@@ -181,6 +204,9 @@ Let's connect:
   </a>
   </div>
   
+
+
+
   <div class="gallery-item w-1">
     <a href="/assets/images/projects/modelicon_legobot.jpg" class="popup">
     <img src="/assets/images/projects/modelicon_legobot.jpg" alt="Setup Alpha" />
@@ -188,7 +214,6 @@ Let's connect:
   </div>
 
 
----
 
 
 <style>

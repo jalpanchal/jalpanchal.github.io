@@ -105,7 +105,14 @@ This project constituted an immersive experience that facilitated the applicatio
 - **Research Application:** I successfully translated abstract theoretical concepts of friction into a tangible, functional measurement system.
 
 ## Research Lab and Principal Investigator
-- **Lab Name:** Neuromechanics Lab (the BRAIN Lab Now)
+- **Lab Name:** <a href="https://home.iitm.ac.in/skm/index.html">Neuromechanics Lab (the BRAIN Lab Now)</a>
 - **Department:** Department of Applied Mechanics
 - **Principal Investigator:** Dr. Varadhan S.K.M.
 - **Institution:** Indian Institute of Technology, Madras
+
+<figure class="m-figure center">
+  <a href="/assets/images/projects/iitm_lab_team.JPG" class="popup">
+    <img src="/assets/images/projects/iitm_lab_team.JPG" alt="Lab Team" />
+  </a>
+  <figcaption>Neuromechanics Lab team</figcaption>
+</figure>
