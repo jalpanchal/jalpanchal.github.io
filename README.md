@@ -1,27 +1,19 @@
-# Minimal Mistakes remote theme starter
+# About
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Welcome to the personal website of **Jal Panchal** — a research scientist and engineer passionate about building health technologies that connect physiology, data, and real-world impact.
 
-Contains basic configuration to get you a site with:
+This site is built with [Jekyll](https://jekyllrb.com/) and the [Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/), and is hosted via [GitHub Pages](https://pages.github.com/).
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+## 🌐 Website
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+Visit: [jalpanchal.com](https://jalpanchal.com)
 
----
+## 🧠 About
 
-## Troubleshooting
+I work at the intersection of:
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+- **Sensing Hardware**
+- **Signal Processing**
+- **Data Science & Machine Learning**
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+I enjoy transforming noisy biosignals into meaningful insights, with experience across heart rate and blood pressure estimation, motion artifact removal, and biofeedback algorithm development. My portfolio spans clinical validation, embedded systems, and user-focused solutions.
