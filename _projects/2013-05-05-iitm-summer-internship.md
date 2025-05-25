@@ -61,8 +61,8 @@ During the evaluation phase, Setup Alpha revealed two principal areas for improv
 ### Tribometer Setup Beta: Innovation through Iteration
 To mitigate the limitations identified in Setup Alpha, I conceptualized and developed "Setup Beta," which ingeniously incorporated a capstan-bowstring mechanism. This represented a substantial redesign aimed at achieving smoother motion and superior tension control.
 <figure class="m-figure center">
-  <a href="/assets/images/projects/iitm_capstonsetup_process.jpg" class="popup">
-    <img src="/assets/images/projects/iitm_capstonsetup_process.jpg" alt="Setup Alpha" />
+  <a href="/assets/images/projects/iitm_friction_measurement_capstan_setup.JPG" class="popup">
+    <img src="/assets/images/projects/iitm_friction_measurement_capstan_setup.JPG" alt="Setup Alpha" />
   </a>
   <figcaption>Setup Beta using a custom capstan and bowstring</figcaption>
 </figure>

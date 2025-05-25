@@ -26,109 +26,167 @@ Let's connect:
 
 
 <div class="gallery-container">
+  
   <div class="gallery-item w-1">
-      <img src="/assets/images/projects/iitm_friction_measurement_capston_setup.JPG" alt="Gallery Image 1">
-  </div>
-  <div class="gallery-item w-1">
+  <a href="/assets/images/projects/upenn_infantsim_cad.png" class="popup">
     <img src="/assets/images/projects/upenn_infantsim_cad.png" alt="Gallery Image 2">
+  </a>
   </div>
+
   <div class="gallery-item w-1">
+  <a href="/assets/images/jal_ecg_mm.jpg" class="popup">
     <img src="/assets/images/jal_ecg_mm.jpg" alt="Gallery Image 3">
+  </a>
   </div>
+
   <div class="gallery-item w-1">
+  <a href="/assets/images/projects/upenn_cis541_pacemaker_circuit.jpg" class="popup">
     <img src="/assets/images/projects/upenn_cis541_pacemaker_circuit.jpg" alt="Gallery Image 3">
+  </a>
   </div>
+
+
+  
    <div class="gallery-item w-3">
     <video controls autoplay loop muted>
-      <source src="/assets/videos/infantsim_openpose.mp4" type="video/mp4">
+      <source src="/assets/videos/upenn_infantsim_openpose.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
-  <div class="gallery-item w-1">
-      <img src="/assets/images/projects/iitk_helmholtzresonator_cad.PNG" alt="Gallery Image 1">
-  </div>
-  <div class="gallery-item w-1">
-    <img src="/assets/images/projects/iitk_helmholtzresonator_comsol.PNG" alt="Gallery Image 2">
-  </div>
-  <div class="gallery-item w-1">
-    <img src="/assets/images/projects/iitk_helmholtzresonator.JPG" alt="Gallery Image 3">
-  </div>
-  <div class="gallery-item w-1">
-    <img src="/assets/images/projects/iitk_jal_helmholtsresonator_exp.JPG" alt="Gallery Image 3">
-  </div>
-  <div class="gallery-item w-1">
-    <img src="/assets/images/projects/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 4">
-  </div>
-  <div class="gallery-item w-1">
-    <img src="/assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG" alt="Gallery Image 4">
-  </div>
-  <div class="gallery-item rw-2">
-    <img src="/assets/images/jal_cycle_atlanticcity.jpeg" alt="Gallery Image 4">
-  </div>
+
+
   <div class="gallery-item r-2">
+  <a href="/assets/images/jal_soldering.jpg" class="popup">
     <img src="/assets/images/jal_soldering.jpg" alt="Gallery Image 4">
+  </a>
   </div>
+
+  <div class="gallery-item rw-2">
+  <a href="/assets/images/jal_cycle_atlanticcity.jpeg" class="popup">
+    <img src="/assets/images/jal_cycle_atlanticcity.jpeg" alt="Gallery Image 4">
+  </a>
+  </div>
+
+
+  <div class="gallery-item w-3">
+  <video controls autoplay loop muted>
+    <source src="/assets/videos/ppg_cleaning.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  </div>
+
+
+
+<div class="gallery-item w-2">
+  <a href="/assets/images/projects/iitk_helmholtzresonator_process.jpg" class="popup">
+      <img src="/assets/images/projects/iitk_helmholtzresonator_process.jpg" alt="Gallery Image 1">
+  </a>
+  </div>
+
+  <div class="gallery-item w-1">
+  <a href="/assets/images/projects/iitm_friction_measurement_capstan_setup.JPG" class="popup">
+      <img src="/assets/images/projects/iitm_friction_measurement_capstan_setup.JPG" alt="Gallery Image 1">
+  </a>
+</div> 
+
+
+  <div class="gallery-item w-1">
+  <a href="/assets/images/projects/iitk_jal_helmholtsresonator_exp.JPG" class="popup">
+    <img src="/assets/images/projects/iitk_jal_helmholtsresonator_exp.JPG" alt="Gallery Image 3">
+  </a>
+  </div>
+
+  <div class="gallery-item w-1">
+  <a href="/assets/images/jal_ces2025_booth.jpg" class="popup">
+    <img src="/assets/images/jal_ces2025_booth.jpg" alt="Gallery Image 5">
+  </a>
+  </div>
+
+  <div class="gallery-item w-1">
+  <a href="/assets/images/jal_cycle_fix.jpeg" class="popup">
+    <img src="/assets/images/jal_cycle_fix.jpeg" alt="Gallery Image 5">
+  </a>
+  </div>
+
+
+
   <div class="gallery-item w-2">
+  <a href="/assets/images/jal_frinds_kayak.jpg" class="popup">
+    <img src="/assets/images/jal_frinds_kayak.jpg" alt="Gallery Image 5">
+  </a>
+  </div>
+
+  <div class="gallery-item w-1">
+  <a href="/assets/images/jal_campfire.jpg" class="popup">
+    <img src="/assets/images/jal_campfire.jpg" alt="Gallery Image 5">
+  </a>
+  </div>
+  
+
+<div class="gallery-item w-3">
     <video controls autoplay loop muted>
-      <source src="/assets/videos/ppg_cleaning.mp4" type="video/mp4">
+      <source src="/assets/videos/modelicon_bmsce_lego_video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
+
+
+
   <div class="gallery-item r-2">
     <video controls autoplay loop muted>
       <source src="/assets/videos/ces2025_pose.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
-  <div class="gallery-item w-2">
-    <img src="/assets/images/jal_frinds_kayak.jpg" alt="Gallery Image 5">
-  </div>
-  <div class="gallery-item rw-2">
-    <video controls autoplay loop muted>
-      <source src="/assets/videos/infantsim_rhanimation.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+
+   <div class="gallery-item r-2">
+   <a href="/assets/images/jal_qualcomm_standee.jpg" class="popup">
+    <img src="/assets/images/jal_qualcomm_standee.jpg" alt="Gallery Image 5">
+  </a>
   </div>
 
   <div class="gallery-item w-1">
-    <img src="/assets/images/projects/iitm_friction_measurement_timingbelt_setup1.JPG" alt="Gallery Image 5">
-  </div>
-   <div class="gallery-item r-2">
-    <img src="/assets/images/jal_qualcomm_shenzhen.jpeg" alt="Gallery Image 5">
-  </div>
-  <div class="gallery-item w-1">
-    <img src="/assets/images/jal_campfire.jpg" alt="Gallery Image 5">
-  </div>
-  <div class="gallery-item w-1">
+  <a href="/assets/images/jal_cycle_nahant.jpeg" class="popup">
     <img src="/assets/images/jal_cycle_nahant.jpeg" alt="Gallery Image 5">
+  </a>
   </div>
+
   <div class="gallery-item w-1">
+  <a href="/assets/images/jal_mocktrial02_jan6.jpeg" class="popup">
     <img src="/assets/images/jal_mocktrial02_jan6.jpeg" alt="Gallery Image 5">
+  </a>
   </div>
-  <div class="gallery-item w-2">
+
+
+
+  <div class="gallery-item w-3">
     <video controls autoplay loop muted>
       <source src="/assets/videos/iitk_phmr_labview.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
- 
+
+
+
+  
   <div class="gallery-item w-1">
-    <img src="/assets/images/jal_cycle_fix.jpeg" alt="Gallery Image 5">
+  <a href="/assets/images/projects/iitk_helmholtzresonator.JPG" class="popup">
+    <img src="/assets/images/projects/iitk_helmholtzresonator.JPG" alt="Gallery Image 3">
+  </a>
   </div>
-  <div class="gallery-item w-1">
-    <img src="/assets/images/jal_ces2025_booth.jpg" alt="Gallery Image 5">
-  </div>
-  <div class="gallery-item w-3">
-    <video controls autoplay loop muted>
-      <source src="/assets/videos/modelicon_bmsce_lego_video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+
+<div class="gallery-item w-1">
+  <a href="/assets/images/projects/iitm_friction_measurement_alpha.JPG" class="popup">
+    <img src="/assets/images/projects/iitm_friction_measurement_alpha.JPG" alt="Gallery Image 4">
+  </a>
   </div>
   
   <div class="gallery-item w-1">
-    <img src="/assets/images/jal_cycle_repair_kitchen.jpeg" alt="Gallery Image 5">
+    <a href="/assets/images/projects/iitm_friction_measurement_capstan_setup.JPG" class="popup">
+    <img src="/assets/images/projects/iitm_friction_measurement_capstan_setup.JPG" alt="Setup Alpha" />
+  </a>
   </div>
-</div>
+
 
 ---
 
@@ -167,14 +225,14 @@ Let's connect:
   max-width: 500px  !important;
   max-height: none  !important;
   object-fit: contain  !important;
-  transform: scale(1.5);
+  transform: scale(1.1);
   z-index: 100;
   background: white;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 
 }
 .gallery-item:hover video {
-  ursor: zoom-in;
+  cursor: zoom-in;
   aspect-ratio: auto  !important;
   position: absolute  !important;
   width: auto  !important;
@@ -182,7 +240,7 @@ Let's connect:
   max-width: 500px  !important;
   max-height: none  !important;
   object-fit: contain  !important;
-  transform: scale(1.5);
+  transform: scale(1.1);
   z-index: 100;
   background: white;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
