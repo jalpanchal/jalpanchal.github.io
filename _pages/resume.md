@@ -59,7 +59,6 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
         <li><b>Algorithm Development and Implementation:</b> Led the development of a personalized stress metric, from hypothesis to product launch in 6 months, by managing studies and cross-functional integration.</li>
         <li><b>Clinical Validation Study</b> Conducted a clinical study (n = 20) to validate blood pressure prediction, developing a real-time data quality monitoring and analysis system that addressed device fit issues, increasing usable data by more than 10%.</li>
         <li><b>Blood Pressure Prediction:</b> Developed advanced signal processing and feature engineering techniques to train machine learning models for blood pressure estimation from in-ear signals, reducing prediction error by over 20%.</li>
-        <li><b>Motion Atrifact Removal:</b> Developed novel signal processing and feature engineering techniques to train machine learning models for blood pressure estimation from in-ear signals, reducing prediction error by over 20%.</li>
         <li><b>Project Management:</b> Led New Product Introduction for wireless earbuds line, collaborating with cross-functional teams and manufacturers. Developed infrasound testing fixtures that reduced product rejection rates by 50% within 6 months.</li>
       </ul>
       <div class="card-tags">
