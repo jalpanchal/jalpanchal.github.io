@@ -24,6 +24,7 @@ twitter_username: jalponcho
 github_username: jalpanchal
 minimal_mistakes_skin: default
 search: true
+math: true
 
 # Build settings
 markdown: kramdown

@@ -120,6 +120,19 @@ Despite the limitations in HRV accuracy, we explored a method to identify behavi
 This thesis represents a crucial first step in understanding the complex interplay between brain activity, autonomic nervous system changes, and behavioral states in epilepsy. While wearable devices show great promise for continuous, long-term monitoring, further research with larger datasets is needed to validate these initial observations and overcome the limitations in HRV measurement accuracy from consumer-grade devices. Ultimately, this work contributes to paving the way for personalized behavioral feedback systems that could significantly improve the lives of people with epilepsy.
 
 ---
+## Skills Overview
+
+This Master's thesis project provided a unique opportunity to apply and develop a diverse set of skills, including:
+
+* **Network Neuroscience & Graph Theory:** Expertise in constructing, analyzing, and interpreting functional brain networks from physiological data.
+* **Physiological Signal Processing:** Proficient in processing and analyzing time-series data from ECG, EEG, and wearable sensors (e.g., heart rate variability, motion data).
+* **Data Analysis & Statistics:** Strong capabilities in statistical analysis, hypothesis testing, and quantitative interpretation of complex biological datasets.
+* **Scientific Programming:** Advanced proficiency in Python for data manipulation, analysis, and visualization.
+* **Clinical Data Handling:** Experience in working with sensitive patient data, understanding data privacy, and collaborating within a clinical research setting.
+* **Wearable Technology Integration:** Practical experience in data acquisition from consumer wearable devices (Apple Watch, Fitbit) and understanding their capabilities and limitations in a research context.
+* **Technical Writing & Communication:** Ability to clearly articulate complex scientific concepts, methods, and findings to both technical and non-technical audiences.
+* **Research Design & Execution:** Experience in planning and executing a multi-faceted research project from conception to completion.
+
 ## Research Lab and Principal Investigator
 
 - **Lab Name:** <a href="https://littlab.seas.upenn.edu">Litt Lab</a>, <a href="https://cnt.upenn.edu/">Center for Neuroengineering and Therapeutics (CNT)</a>

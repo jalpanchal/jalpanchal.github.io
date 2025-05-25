@@ -97,6 +97,17 @@ The wireless system comprised a transmitter module within the PHMR and a receive
 ## Conclusion
 My undergraduate thesis successfully designed and developed two distinct yet interconnected systems for pipeline health monitoring robots: an innovative acoustic tracking system using Helmholtz resonators and a wireless location monitoring system integrating an odometer with Xbee/ZigBee communication. This work contributed to advancing non-intrusive pipeline inspection technologies, addressing the challenges of communication and tracking within complex and harsh environments like natural gas pipelines. The insights gained from the Helmholtz resonator experiments, particularly regarding sound propagation in pipes, and the successful implementation of the wireless tracking module lay a strong foundation for future developments in this field.
 
+---
+## Skills Overview
+This project provided a comprehensive learning experience, allowing me to apply and enhance a range of technical and engineering skills:
+- **Core Engineering Principles:** Applied knowledge of Acoustics, Fluid Dynamics, and Mechatronics for system design and analysis.
+- **Design & Simulation:** Utilized CATIA V5 for CAD modeling and COMSOL Multiphysics for Finite Element Analysis (FEA) and acoustic simulations.
+- **Experimental & Data Analysis:** Designed and executed experiments, performing data acquisition and signal processing (FFT analysis) using LabVIEW.
+- **Embedded Systems & IoT:** Programmed microcontrollers (Arduino, Intel Galileo) and integrated hardware for real-time operation and wireless communication via ZigBee protocol.
+- **System Integration & Problem Solving:** Successfully combined diverse components into a functional system, demonstrating strong troubleshooting and debugging capabilities.
+- **Project Management & Documentation:** Managed project phases from concept to completion and produced comprehensive technical reports.
+- **GUI Development:** Created user-friendly graphical interfaces for system monitoring.
+
 ## Research Lab and Principal Investigator
 - **Institution:** Manipal Institute of Technology, Manipal University (for Bachelor of Technology) 
 - **Internship Host:** Smart Material Structures and Systems (SMSS) Laboratory, Department of Mechanical Engineering, Indian Institute of Technology Kanpur 

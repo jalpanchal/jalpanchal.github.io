@@ -98,6 +98,41 @@ This project represents a significant contribution to the development of quantit
   <figcaption>Comparison of Arm trajectory from Simulator vs Computer Vision and Comparison of CoM changes from Simulator vs CoP changes from Pressure sensitive Mat.</figcaption>
 </figure>
 
+---
+## Skills Acquired
+
+Through the development of the robotic infant simulator, I significantly enhanced my proficiency in the following key areas:
+
+* **Robotics System Design & Development:**
+    * Conceptualizing, designing, and fabricating complex robotic mechanisms.
+    * Selecting appropriate actuators (e.g., Dynamixel servos) based on performance requirements (torque, precision).
+    * Integrating custom 3D-printed components into functional systems.
+    * Understanding and applying principles of biomechanical simulation.
+* **Kinematics & Dynamics:**
+    * Developing and implementing forward kinematics models (Denavit-Hartenberg convention).
+    * Performing coordinate transformations between different frames of reference.
+    * Modeling Center of Mass (COM) for multi-link systems.
+* **Sensor Integration & Data Acquisition:**
+    * Interfacing with various sensors (load cells, cameras, motor encoders).
+    * Designing and implementing data synchronization protocols for multi-modal sensor data.
+    * Setting up and managing data acquisition pipelines.
+* **Computer Vision & Image Processing:**
+    * Applying advanced pose estimation techniques (e.g., OpenPose) for human and robot motion analysis.
+    * Extracting meaningful features from video data for quantitative assessment.
+    * Understanding the relationship between visual cues and physical measurements (e.g., COP).
+* **Data Analysis & Scientific Computing:**
+    * Utilizing tools like MATLAB and Python for data processing, analysis, and visualization.
+    * Performing correlation analysis to validate experimental findings.
+    * Interpreting complex datasets to draw scientific conclusions.
+* **Research & Problem Solving:**
+    * Identifying clinical needs and translating them into engineering challenges.
+    * Designing experiments to test hypotheses in a controlled environment.
+    * Troubleshooting and iterating on design to improve system performance.
+* **Technical Communication:**
+    * Documenting detailed mechanical designs, kinematic models, and experimental procedures.
+    * Presenting complex technical information clearly and concisely 
+
+
 ## Research Lab and Principal Investigator
 
 - **Lab Name:** <a href="https://www.med.upenn.edu/rehabilitation-robotics-lab/">Rehabilitation Robotics Lab</a>

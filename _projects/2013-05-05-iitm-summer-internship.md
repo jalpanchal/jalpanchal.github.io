@@ -1,5 +1,5 @@
 ---
-title: "IITM - Friction Measurement System"
+title: "Unveiling the Science of Touch"
 categories:
   - Projects
 tags:
@@ -13,156 +13,79 @@ layout: single
 header:
   image: /assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG
   teaser : /assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG
-toc: true
+toc: false
 # toc_sticky: true
 # featured: true
+math: true
 ---
 
-## Project Overview
+## Unveiling the Science of Touch: My Summer Foray into Skin Friction Measurement at IIT Madras
+During my Summer Fellowship at the Neuromechanics Lab, Department of Applied Mechanics, Indian Institute of Technology Madras, I undertook a compelling project: the design and development of a novel tribometer apparatus to investigate the frictional properties between human digits and various surface materials. This endeavor constituted a comprehensive integration of mechanical design principles, precision instrumentation, electronic systems, and seamless software integration, culminating in a functional system for the quantitative analysis of skin-material friction coefficients.
 
-During my Summer Fellowship at the Neuromechanics Lab, Department of Applied Mechanics, IIT Madras, I designed and developed a tribometer setup to study the frictional properties between human fingers and various surface materials. This project combined mechanical design, instrumentation, electronics, and software integration to create a functional system for analyzing skin-material friction coefficients.
+### The Challenge: Quantifying the Elusive Force of Friction
+The interaction of the human hand with surfaces presents a remarkably intricate biomechanical phenomenon. While classical Amonton's laws of friction provide a foundational framework for solid-solid interfaces, the inherent viscoelastic and topographical characteristics of human skin introduce complexities not fully elucidated by traditional models. Our primary objective was to engineer an instrument capable of:
 
-## The Challenge
+- Measuring the coefficient of friction between finger digits and diverse test surfaces.
+- Analyzing the variation in friction as a function of applied normal forces.
+- Comparing empirical results with theoretical friction models.
+- Generating reliable and repeatable measurements essential for rigorous scientific inquiry.
 
-The human hand is remarkably complex in its interactions with surfaces. While Amonton's laws of friction provide a general framework for understanding friction between solid surfaces, the unique properties of human skin create interesting variations that aren't fully explained by classical friction models. 
-
-Our objective was to create an instrument that could:
-- Measure the coefficient of friction between finger digits and various test surfaces
-- Analyze variations in friction with different applied forces
-- Compare experimental results with theoretical friction models
-- Generate reliable, repeatable measurements for scientific study
-
-## Technical Background
-
-Before diving into the design, I studied the fundamentals of friction mechanics and previous research in the field:
-
-### Friction Fundamentals
-- **Dry friction** resistance between two solid surfaces in contact
-- **Static friction** (μs) between non-moving surfaces
-- **Kinetic friction** (μk) between moving surfaces in relative motion
-
-The classical Amonton's laws state:
-- Friction force is directly proportional to applied load
-- Friction force is independent of apparent contact area
-- Kinetic friction is independent of sliding velocity
-
-The mathematical model for friction follows Coulomb's equation:
-```
-Ff = μ × Fn
-```
-Where:
-- Ff is the friction force
-- μ is the coefficient of friction 
-- Fn is the normal force
-
-## Design Methodology
-
-I followed an iterative design process, developing two prototypes (Alpha and Beta) with improvements based on testing and performance evaluation:
-
-### Design Requirements
-1. Measure vertical force (Fv) and horizontal force (Fh) at the finger-surface interface
-2. Create controlled slip between finger and test surface
-3. Record force data for friction coefficient calculation
-4. Allow testing of multiple surface materials
-5. Provide consistent, repeatable measurements
-
-## Tribometer Setup Alpha
-
-The first prototype used a linear guide mechanism inspired by printer cartridge movement:
-
-![Tribometer Setup Alpha](/assets/images/iitm_friction_measurement_timingbelt_setup1.JPG)
-
-### Key Components
-- **Base**: 10mm wood sheet for stability and workability
-- **Linear Motion System**: Precision linear guide rail with ball bearing slide block
-- **Actuation**: DC geared motor (12V, 45kg-cm torque) 
-- **Motion Transfer**: Timing pulley and belt system (2mm pitch)
-- **Sensing**: ATI multi-dimensional force sensor
-- **Control**: Arduino Uno microcontroller with LabVIEW integration
-- **Power**: 12V DC power supply
-
-### Working Principle
-The test surface attached to the force sensor moves horizontally while the subject places their finger on the surface with controlled vertical force. As the motor rotates, the timing belt drives the linear slide, creating relative motion between the finger and test surface. The force sensor continuously measures both vertical force (Fv) and horizontal friction force (Fh), allowing calculation of the coefficient of friction (μ = Fh/Fv).
-
-### Technical Challenges
-During testing of Setup Alpha, I identified two main issues:
-1. High friction in the linear motion system
-2. Difficulty maintaining consistent tension in the timing belt
-
-## Tribometer Setup Beta
-
-To address these challenges, I designed Setup Beta using a capstan-bowstring mechanism:
-
-![Tribometer Setup Beta](/assets/images/iitm_friction_measurement_capston_setup.JPG)
-
-### Design Improvements
-- **Capstan Drive**: Replaced timing belt with a stainless steel cable (1.2mm diameter) wrapped around a custom-designed capstan
-- **Tension Control**: Added spring mechanism to maintain consistent cable tension
-- **Movable Base**: Redesigned component to connect the cable to the slide block
-- **Reduced Friction**: Modified system reduced mechanical resistance in the linear motion
-
-### Technical Details
-- **Motor**: Same 60rpm, 45kg-cm torque DC geared motor
-- **Capstan**: Custom designed with 20mm diameter, V-thread groove (1.5mm pitch)
-- **Linear Speed**: Approximately 6 cm/s
-- **Spring Constant**: ~2 kg/cm for maintaining cable tension
-- **Control System**: Same Arduino + LabVIEW integration for precise motor control and data acquisition
-
-## Software Integration
-
-The control and data acquisition system combined Arduino for low-level motor control with LabVIEW for the user interface and data processing:
-
-### Arduino Development
-I wrote several iterations of Arduino code to control motor direction and speed, including:
-- Basic ON/OFF control
-- Direction control with switch input
-- Speed control using potentiometer input
-- Integrated control through LabVIEW communication
-
-### LabVIEW Interface
-The LabVIEW virtual instruments (VIs) provided:
-- Real-time force data visualization
-- Motor speed and direction control
-- Data recording and export capabilities
-- Integrated experimental workflow
+This necessitated a system capable of precisely quantifying both the normal force ({% raw %}$F_{\nu}${% endraw %}) exerted by the digit and the tangential frictional force ($F_f$) at the onset of slip, thereby enabling the accurate calculation of the coefficient of friction ($\mu=\frac{F_f}{F_{\nu}}$) 
 
 
+### Iterative Design: From Concept to Refined Prototype
+I adopted a rigorous iterative design methodology, developing two distinct prototypes – Alpha and Beta – with continuous enhancements derived from systematic testing and performance evaluation. This approach was instrumental in refining the system's accuracy, robustness, and overall operational efficacy.
 
-## Results and Analysis
+### Tribometer Setup Alpha: The Initial Foray
+My initial prototype, designated "Setup Alpha," employed a linear guide mechanism, drawing conceptual inspiration from the precision linear motion systems commonly found in printer cartridges.
 
-With the tribometer setup, we could analyze:
+- Mechanical Design & Actuation: I engineered a system utilizing a DC geared motor (12V, 45kg-cm torque, 60rpm) to actuate a timing pulley and belt system, which in turn translated a linear slide. This slide was equipped with an ATI multidimensional force sensor for the acquisition of critical force data. The structural base comprised a stable 10mm wood sheet, selected for its material properties conducive to prototyping and stability.
+- Control System Integration: I developed Arduino code for motor direction and speed control, subsequently integrating this with a LabVIEW graphical user interface. This integration facilitated intuitive control and real-time data acquisition from the force sensor, thereby demonstrating my capability to interface hardware and software components effectively.
 
-1. Static coefficient of friction between finger digits and various materials
-2. Changes in friction with varying normal force
-3. Differences between static and kinetic friction coefficients
-4. Verification of Amonton's laws for skin-surface interfaces
+During the evaluation phase, Setup Alpha revealed two principal areas for improvement: significant parasitic friction within the linear motion system itself and challenges in maintaining consistent tension in the timing belt. These observations provided critical insights for the subsequent design iteration.
 
-By plotting Fh against Fv at the moment of slip, we could determine the coefficient of friction as the slope of the resulting curve.
+### Tribometer Setup Beta: Innovation through Iteration
+To mitigate the limitations identified in Setup Alpha, I conceptualized and developed "Setup Beta," which ingeniously incorporated a capstan-bowstring mechanism. This represented a substantial redesign aimed at achieving smoother motion and superior tension control.
 
-## Skills Applied
+- Refined Mechanical Design: In Beta, a custom-designed capstan featuring a V-thread groove (20mm diameter, 1.5mm pitch) was affixed to the motor shaft. This capstan wound and unwound a 1.2mm diameter stainless steel rope, functioning as the "bowstring." This rope was securely attached to a movable base, ensuring precise linear displacement of the slide block and the integrated force sensor.
+- Tension Control & Stability: A strategically positioned spring mechanism maintained consistent cable tension, resulting in a significant reduction in mechanical resistance compared to the timing belt system. This demonstrated my ability to diagnose and implement sophisticated mechanical solutions.
+- Achieved Performance: This refined apparatus achieved a linear speed of approximately 6 cm/s, enabling reliable slip measurement under controlled conditions.
 
-This project allowed me to apply and develop several technical skills:
+### Software Integration: The Brain of the System
+The control and data acquisition architecture of the tribometer seamlessly combined Arduino for low-level motor control with LabVIEW for a robust user interface and comprehensive data processing.
+- Arduino Development: I authored several iterations of Arduino code, encompassing functionalities from basic ON/OFF control to sophisticated speed and direction modulation, ultimately integrating these for seamless communication with LabVIEW. This work underscored my proficiency in microcontroller programming.
+- LabVIEW Interface: The LabVIEW Virtual Instruments (VIs) I developed provided:
+  - Real-time force data visualization.
+  - Precise motor speed and direction control.
+  - Robust data recording and export capabilities.
+  - An integrated experimental workflow, thereby streamlining the entire measurement process.This demonstrates my competency in graphical programming and the creation of intuitive human-machine interfaces.
 
-- **Mechanical Design**: Creating custom mechanisms and selecting appropriate components
-- **CAD Modeling**: Designing custom parts for the experimental setup
-- **Electronics**: Motor driver circuit design and sensor integration
-- **Programming**: Arduino coding and LabVIEW development
-- **Data Analysis**: Processing force sensor data to calculate friction coefficients
-- **Problem Solving**: Identifying issues in the first prototype and developing improvements
-- **Research Application**: Implementing theoretical concepts in a practical measurement system
+### Results and Analysis: Quantifying the Unseen
+With the fully functional tribometer, we were able to conduct rigorous quantitative analysis, yielding valuable insights:
+- Determination of the static coefficient of friction between human finger digits and various material surfaces.
+- Analysis of the relationship between friction coefficients and varying normal forces.
+- Differentiation between static and kinetic friction coefficients.
+- Crucially, empirical verification of Amonton's laws for skin-surface interfaces, notwithstanding the unique properties of human skin.
 
-## Future Improvements
+By plotting the horizontal friction force ($F_h$) against the vertical normal force ($F_{\nu}$)at the moment of slip, the coefficient of friction was precisely ascertained as the slope of the resultant curve.
 
-Based on my experience with both prototypes, I identified several potential improvements:
+## Looking Ahead
+This IIT Madras summer research project represents an invaluable cornerstone in my engineering trajectory. It not only deepened my comprehension of tribology and biomechanics but also solidified my practical engineering skills within a real-world research context. The comprehensive experience gained in designing, constructing, troubleshooting, and validating these systems will be instrumental in future endeavors spanning robotics, biomechanics, and mechatronics. I am particularly enthusiastic about the potential of such systems to contribute to a more profound understanding of human-machine interaction and to inform the design of more intuitive and effective robotic interfaces.
 
-1. Using a motor with optical feedback for more precise position control
-2. Implementing a dedicated battery power supply for portability
-3. Testing different cable materials and diameters for the bowstring mechanism
-4. Redesigning the movable base for better ergonomics and reduced interference
-5. Adding automatic test sequencing for improved experimental reproducibility
+---
+## Skills Overview
+This project constituted an immersive experience that facilitated the application and significant development of a robust set of technical competencies:
+- **Mechatronics System Design & Prototyping:** From conceptualization to physical realization, I designed and constructed complex electromechanical systems employing diverse materials and mechanisms (e.g., timing belts, capstan-bowstring).
+- **CAD Modeling:** I utilized CAD software for the design of custom components for the experimental setup, ensuring precision and manufacturability.
+- **Robotics & Control Systems:** My work encompassed programming microcontrollers (Arduino Uno) and integrating them with graphical programming environments (LabVIEW) for precise motor control and system automation.
+- **Sensor Integration & Data Acquisition:** I acquired practical experience working with ATI multidirectional force sensors for accurate force measurement and establishing reliable data logging protocols.
+- **Problem Solving & Iterative Development:** I systematically identified design deficiencies in initial prototypes and implemented effective corrective solutions, thereby demonstrating a strong iterative development mindset.
+- **Electronics & Circuit Design:** I was responsible for the design of motor driver circuits and the overall integration of sensors within the electrical system.
+- **Data Analysis & Scientific Rigor:** I processed raw force sensor data to compute friction coefficients, ensuring the scientific validity and integrity of the measurements.
+- **Research Application:** I successfully translated abstract theoretical concepts of friction into a tangible, functional measurement system.
 
-## Conclusion
-
-This tribometer project successfully combined principles of mechanical design, electronics, and software integration to create a functional scientific instrument. The iterative design process allowed me to identify and solve technical challenges, resulting in a system capable of measuring and analyzing the complex frictional properties between human skin and various materials.
-
-The experience gained in this project has strengthened my skills in mechatronics system design, instrumentation, and experimental methodology—all valuable capabilities for future engineering challenges.
+## Research Lab and Principal Investigator
+- **Lab Name:** Neuromechanics Lab (the BRAIN Lab Now)
+- **Department:** Department of Applied Mechanics
+- **Principal Investigator:** Dr. Varadhan S.K.M.
+- **Institution:** Indian Institute of Technology, Madras
