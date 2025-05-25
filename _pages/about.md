@@ -19,7 +19,7 @@ Let's connect:
 <div class="about-me-links">
       <a href="https://calendly.com/jalpanchal1" class="tag">Schedule a Call</a>
       <a href="mailto:jalpanchal1+contact@gmail.com?subject=Hello!" class="tag">Email Me</a>
-      <a href="https://www.linkedin.com/in/jalpanchal/" class="tag">Linked In</a>
+      <a href="https://www.linkedin.com/in/jalpanchal/" class="tag">LinkedIn</a>
       <a href="https://scholar.google.com/citations?user=VUb6FrQAAAAJ&hl=en" class="tag">Google Scholar</a>
 </div>
 ---

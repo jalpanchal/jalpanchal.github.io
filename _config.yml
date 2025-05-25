@@ -14,9 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Jal Panchal
+name: Jal Panchal
 email:
-description: >- # this means to ignore newlines until "baseurl:"
-  A personal blog about my journey in the world of technology and science.
+description: "A personal blog about my journey in the world of technology and science." # this means to ignore newlines until "baseurl:"
+  
 #baseurl: "/about" # the subpath of your site, e.g. /blog
 # url: "https://jalpanchal.github.io" # the base hostname & protocol for your site
 url : "https://www.jalpanchal.com" # the base hostname & protocol for your site
@@ -27,6 +28,8 @@ github_username: jalpanchal
 minimal_mistakes_skin: default
 search: true
 math: true
+og_image: "/assets/images/jal.png" # Open Graph image for social media sharing
+logo: "/assets/images/favicon.png" # Logo for the site
 
 # Build settings
 markdown: kramdown
@@ -75,11 +78,12 @@ plugins:
   - jekyll-include-cache
   - jekyll-toc
   - jekyll-react
+  - jekyll-seo-tag
   
 
 author:
   name   : "Jal Panchal"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/jal.png"
   bio    : "A R&D scientist democratizing healthcare"
   location: "Boston, MA"
   links:
@@ -92,6 +96,12 @@ author:
     # - label: "GitHub"
     #   icon: "fab fa-fw fa-github"
     #   url: "https://github.com/jalpanchal"
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-RFL8LMV2XD"
+    anonymize_ip: false # default
 
 footer:
   links:
@@ -135,7 +145,7 @@ defaults:
       comments: false
       share: false
       related: true
-      toc: true
+      toc: false
       toc_sticky: true
   - scope:
       path: ""
