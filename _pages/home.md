@@ -23,19 +23,26 @@ permalink: /
 
 <!-- PPG Video Section -->
 <div class="full-width-section white-section">
-  <div class="container">
-    <p>
-    <strong style="color: rgb(0, 0, 0); font-size: 1.2em;">
-      Ever wondered how clean biosignal data is extracted from raw, noisy signals?<br>
-      Watch this quick demo and then try it yourself in the interactive game below!
-    </strong>
+  <div class="container minimal-transition">
+    <h2>Explore Biosignal Filtering</h2>
+    <p class="subtitle">
+      Biosignals — like most real-world signals — are often messy and full of noise.<br>
+      A key skill in biomedical signal processing is learning how to clean and interpret them.
     </p>
-    <video class="ppg-video" autoplay muted loop>
+    <p class="subtitle">
+      <b>Watch how raw signals are transformed — then try it yourself in the interactive game.</b>
+    </p>
+  </div>
+</div>
+
+<div class="full-width-section white-section">
+  <div class="container">
+    <video class="ppg-video" autoplay muted loop controls>
       <source src="/assets/videos/ppg_cleaning.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-
   <div class="instructions-container">
+    <h3>PPG filtering game </h3>
     <p>Your goal is to clean the noisy PPG signal and match it as closely as possible to the clean reference signal. Aim for an <strong>RMSE (Root Mean Squared Error) below 0.12</strong> to win!</p>
 
     <div class="interactive-container">
@@ -137,15 +144,6 @@ permalink: /
   padding-top: 2rem;
   background-color: #000000;
   margin-bottom: 20px;
-}
-.transition-section {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-bottom: 0;
-  border-top: 2px solid #4CAF50;
-  border-bottom: 2px solid #4CAF50;
 }
 .white-section {
   background-color: #ffffff;
@@ -339,6 +337,29 @@ permalink: /
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
   }
+}
+
+
+.minimal-transition {
+  /* width: 100vw; */
+  text-align: center;
+  /* padding: 3rem 1rem 1rem; */
+  background-color: #ffffff;
+  /* color: #111; */
+  /* font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", sans-serif; */
+}
+
+.minimal-transition h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.minimal-transition p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 @keyframes fadeIn {
