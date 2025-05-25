@@ -5,9 +5,12 @@ categories:
 tags:
   - Computer-Vision
   - Keras
+  - Motion-Sensing
   - Python
   - Robotics
   - Matlab
+  - Nueromotor-Disability
+  - Prototyping
 # author_profile: false
 # layout: archive
 header:

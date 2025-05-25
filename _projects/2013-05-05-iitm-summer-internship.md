@@ -3,16 +3,17 @@ title: "Unveiling the Science of Touch"
 categories:
   - Projects
 tags:
-  - Prototyping
+  - Motion-Sensing
   - CAD
-  - NeuromotorDisability
+  - Nueromotor-Disability
   - LabVIEW
   - Arduino
+  - Prototyping
 # author_profile: false
 layout: single
 header:
-  image: /assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG
-  teaser : /assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG
+  image: /assets/images/projects/iitm_header.JPG
+  teaser : /assets/images/projects/iitm_thumbnail.JPG
 toc: false
 # toc_sticky: true
 # featured: true
@@ -30,13 +31,19 @@ The interaction of the human hand with surfaces presents a remarkably intricate 
 - Comparing empirical results with theoretical friction models.
 - Generating reliable and repeatable measurements essential for rigorous scientific inquiry.
 
-This necessitated a system capable of precisely quantifying both the normal force ({% raw %}$F_{\nu}${% endraw %}) exerted by the digit and the tangential frictional force ($F_f$) at the onset of slip, thereby enabling the accurate calculation of the coefficient of friction ($\mu=\frac{F_f}{F_{\nu}}$) 
+This necessitated a system capable of precisely quantifying both the normal force ($F_{\nu}$) exerted by the digit and the tangential frictional force ($F_f$) at the onset of slip, thereby enabling the accurate calculation of the coefficient of friction ($\mu=\frac{F_f}{F_{\nu}}$) 
 
 
 ### Iterative Design: From Concept to Refined Prototype
 I adopted a rigorous iterative design methodology, developing two distinct prototypes – Alpha and Beta – with continuous enhancements derived from systematic testing and performance evaluation. This approach was instrumental in refining the system's accuracy, robustness, and overall operational efficacy.
 
 ### Tribometer Setup Alpha: The Initial Foray
+<figure class="m-figure center">
+  <a href="/assets/images/projects/iitm_friction_measurement_alpha.JPG" class="popup">
+    <img src="/assets/images/projects/iitm_friction_measurement_alpha.JPG" alt="Setup Alpha" />
+  </a>
+  <figcaption>Setup Alpha using a timing belt and pulley</figcaption>
+</figure>
 My initial prototype, designated "Setup Alpha," employed a linear guide mechanism, drawing conceptual inspiration from the precision linear motion systems commonly found in printer cartridges.
 
 - Mechanical Design & Actuation: I engineered a system utilizing a DC geared motor (12V, 45kg-cm torque, 60rpm) to actuate a timing pulley and belt system, which in turn translated a linear slide. This slide was equipped with an ATI multidimensional force sensor for the acquisition of critical force data. The structural base comprised a stable 10mm wood sheet, selected for its material properties conducive to prototyping and stability.
@@ -44,8 +51,21 @@ My initial prototype, designated "Setup Alpha," employed a linear guide mechanis
 
 During the evaluation phase, Setup Alpha revealed two principal areas for improvement: significant parasitic friction within the linear motion system itself and challenges in maintaining consistent tension in the timing belt. These observations provided critical insights for the subsequent design iteration.
 
+<figure class="m-figure center">
+  <a href="/assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG" class="popup">
+    <img src="/assets/images/projects/iitm_friction_measurement_timingbelt_setup2.JPG" alt="Setup Alpha" />
+  </a>
+  <figcaption>Setup Alpha with LabVIEW Interface</figcaption>
+</figure>
+
 ### Tribometer Setup Beta: Innovation through Iteration
 To mitigate the limitations identified in Setup Alpha, I conceptualized and developed "Setup Beta," which ingeniously incorporated a capstan-bowstring mechanism. This represented a substantial redesign aimed at achieving smoother motion and superior tension control.
+<figure class="m-figure center">
+  <a href="/assets/images/projects/iitm_capstonsetup_process.jpg" class="popup">
+    <img src="/assets/images/projects/iitm_capstonsetup_process.jpg" alt="Setup Alpha" />
+  </a>
+  <figcaption>Setup Beta using a custom capstan and bowstring</figcaption>
+</figure>
 
 - Refined Mechanical Design: In Beta, a custom-designed capstan featuring a V-thread groove (20mm diameter, 1.5mm pitch) was affixed to the motor shaft. This capstan wound and unwound a 1.2mm diameter stainless steel rope, functioning as the "bowstring." This rope was securely attached to a movable base, ensuring precise linear displacement of the slide block and the integrated force sensor.
 - Tension Control & Stability: A strategically positioned spring mechanism maintained consistent cable tension, resulting in a significant reduction in mechanical resistance compared to the timing belt system. This demonstrated my ability to diagnose and implement sophisticated mechanical solutions.

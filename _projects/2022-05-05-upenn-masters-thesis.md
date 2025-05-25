@@ -10,6 +10,7 @@ tags:
   - Apple-Watch
   - Fitbit
   - Neuroscience
+  - Motion-Sensing
 excerpt: "A deep dive into my Master's thesis work on understanding and monitoring behavioral states in seizure patients using network neuroscience and wearable devices."
 header:
   image: "/assets/images/projects/upenn_thesis_part1_methods2.png"

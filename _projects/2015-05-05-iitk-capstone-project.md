@@ -8,6 +8,8 @@ tags:
   - Robots
   - CAD
   - Wireless-Communication
+  - Arduino
+
 excerpt: "A deep dive into my Bachelor's thesis work on designing and developing communication and tracking modules for a Pipeline Health Monitoring Robot (PHMR) using Helmholtz resonators and ZigBee protocol."
 header:
   image: /assets/images/projects/iitk_header.jpg
