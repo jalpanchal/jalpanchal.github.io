@@ -182,8 +182,8 @@ Let's connect:
   </div>
   
   <div class="gallery-item w-1">
-    <a href="/assets/images/projects/iitm_friction_measurement_capstan_setup.JPG" class="popup">
-    <img src="/assets/images/projects/iitm_friction_measurement_capstan_setup.JPG" alt="Setup Alpha" />
+    <a href="/assets/images/projects/modelicon_legobot.jpg" class="popup">
+    <img src="/assets/images/projects/modelicon_legobot.jpg" alt="Setup Alpha" />
   </a>
   </div>
 

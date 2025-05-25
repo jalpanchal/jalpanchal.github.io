@@ -12,8 +12,8 @@ tags:
 # author_profile: false
 layout: single
 header:
-  image: /assets/images/projects/iitm_header.JPG
-  teaser : /assets/images/projects/iitm_thumbnail.JPG
+  image: /assets/images/projects/iitm_header.jpg
+  teaser : /assets/images/projects/iitm_thumbnail.jpg
 toc: false
 # toc_sticky: true
 # featured: true
