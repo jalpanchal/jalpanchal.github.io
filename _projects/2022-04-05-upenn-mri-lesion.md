@@ -15,7 +15,7 @@ header:
   image: /assets/images/projects/upenn_cis581_header.jpg
   teaser: /assets/images/projects/upenn_cis581_thumbnail.jpg
 toc: false
-featured: true
+featured: false
 ---
 
 ## Revolutionizing MRI: Detecting MS Lesions with Portable Scanners
