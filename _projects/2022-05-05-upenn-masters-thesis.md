@@ -13,7 +13,7 @@ tags:
   - Motion-Sensing
 excerpt: "A deep dive into my Master's thesis work on understanding and monitoring behavioral states in seizure patients using network neuroscience and wearable devices."
 header:
-  image: "/assets/images/projects/upenn_thesis_part1_methods2.png"
+  image: /assets/images/projects/upenn_thesis_part1_methods.png
   teaser: /assets/images/projects/upenn_thesis_thumbnail.png # Optional: Add a relevant image path here
   # You might want to create an image for your thesis post, e.g., a brain network or a wearable device graphic.
 toc: false
@@ -91,17 +91,16 @@ We compared the heart rate and HRV measurements from the wearables against the E
 </div> -->
 
 <figure class="m-figure center">
-
-  <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-  <a href="/assets/images/projects/upenn_thesis_ecg_processing1.png" class="popup">
-    <img src="/assets/images/projects/upenn_thesis_ecg_processing1.png" alt="ECG signal processing" style="max-width: 45%;"/>
-  </a>
-  <a href="/assets/images/projects/upenn_thesis_ecg_processing2.png" class="popup">
-    <img src="/assets/images/projects/upenn_thesis_ecg_processing2.png" alt="ECG signal processing and HRV computation" style="max-width: 45%;"/>
-  </a>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <a href="/assets/images/projects/upenn_thesis_ecg_processing1.png" class="popup" style="flex: 1 1 300px; max-width: 400px;">
+      <img src="/assets/images/projects/upenn_thesis_ecg_processing1.png" alt="ECG signal processing" style="width: 100%; height: auto;">
+    </a>
+    <a href="/assets/images/projects/upenn_thesis_ecg_processing2.png" class="popup" style="flex: 1 1 300px; max-width: 400px;">
+      <img src="/assets/images/projects/upenn_thesis_ecg_processing2.png" alt="HRV computation" style="width: 100%; height: auto;">
+    </a>
   </div>
-  <figcaption>ECG signal processing</figcaption>
-  </figure>
+  <figcaption style="text-align: center; margin-top: 10px;">ECG signal processing and HRV computation</figcaption>
+</figure>
 
 
 * **Heart Rate (HR):** We observed a good agreement in heart rate values between the wearable devices and ECG, with an overall Pearson correlation of r=0.87. Specifically, Apple Watch measurements showed higher accuracy and better agreement with ECG-based HR compared to Fitbit.
