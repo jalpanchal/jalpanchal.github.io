@@ -216,7 +216,7 @@ permalink: /
 
 .interactive-frame {
   width: 100%;
-  max-width: 1200px;
+  max-width: 950px;
   height: 550px;
   border-radius: 12px;
   border: 2px solid #ddd;
