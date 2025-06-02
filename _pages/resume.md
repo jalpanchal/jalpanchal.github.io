@@ -346,7 +346,12 @@ Experienced R&D Scientist with 5+ years in physiological signal processing, clin
   </div>
 </div>
 
-
+<figure class="m-figure center">
+  <a href="/assets/images/resume_timeline_overview.jpg" class="popup">
+    <img src="/assets/images/resume_timeline_overview.jpg" alt="Timeline" />
+  </a>
+  <figcaption>Major events timeline</figcaption>
+</figure>
 
 
 
