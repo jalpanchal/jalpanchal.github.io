@@ -46,7 +46,7 @@ permalink: /
     <p>Your goal is to clean the noisy PPG signal and match it as closely as possible to the clean reference signal. Aim for an <strong>RMSE (Root Mean Squared Error) below 0.12</strong> to win!</p>
 
     <div class="interactive-container">
-      <iframe src="/assets/code/ppg_filter_interactive_r.html" class="interactive-frame" frameborder="0"></iframe>
+      <iframe src="/assets/code/ppg_filter_interactive.html" class="interactive-frame" frameborder="0"></iframe>
     </div>
     <ul>
       <li><strong>Highpass Filter:</strong> Removes low-frequency noise (e.g., baseline drift).</li>
