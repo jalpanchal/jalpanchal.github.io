@@ -44,7 +44,9 @@ permalink: /
   <div class="instructions-container">
     <h3>PPG filtering game </h3>
     <p>Your goal is to clean the noisy PPG signal and match it as closely as possible to the clean reference signal. Aim for an <strong>RMSE (Root Mean Squared Error) below 0.12</strong> to win!</p>
-
+    <div class="landscape-warning">
+    <p>📱 For the best experience, please rotate your phone to <strong>landscape mode</strong> or use a larger screen.</p>
+  </div>
     <div class="interactive-container">
       <iframe src="/assets/code/ppg_filter_interactive_r.html" class="interactive-frame" frameborder="0"></iframe>
     </div>
@@ -217,7 +219,7 @@ permalink: /
 .interactive-frame {
   width: 100%;
   max-width: 950px;
-  height: 550px;
+  height: 400px;
   border-radius: 12px;
   border: 2px solid #ddd;
 }
@@ -362,6 +364,25 @@ permalink: /
   margin: 0 auto;
 }
 
+.landscape-warning {
+  display: none;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  font-size: 0.95em;
+}
+
+/* Show warning only on screens smaller than 700px (phones) */
+@media (max-width: 700px) {
+  .landscape-warning {
+    display: block;
+  }
+}
+
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -378,6 +399,8 @@ permalink: /
   .card-grid {
     grid-template-columns: 1fr;
   }
+
+
 </style>
 
 
